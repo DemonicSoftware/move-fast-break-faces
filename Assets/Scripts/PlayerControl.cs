@@ -42,7 +42,7 @@ public class PlayerControl : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-		//moveHorizontal = Input.GetAxis("Horizontal");
+		moveHorizontal = Input.GetAxis("Horizontal");
 		moveVertical = Input.GetAxis("Vertical");
 		anim.SetFloat("speed", Mathf.Abs(moveVertical));
 
@@ -58,11 +58,19 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetKey("up"))
 		{
-			GetComponent<Rigidbody2D>().AddForce(transform.up * maxSpeed * 10);
+			GetComponent<Rigidbody2D>().AddForce(transform.up * maxSpeed);
 		}
 		if(Input.GetKey("down"))
 		{
-			GetComponent<Rigidbody2D>().AddForce(-transform.up * maxSpeed * 10);
+			GetComponent<Rigidbody2D>().AddForce(-transform.up * maxSpeed);
+		}
+		if (Input.GetKey("left"))
+		{
+			GetComponent<Rigidbody2D>().AddForce(-transform.right * maxSpeed);
+		}
+		if (Input.GetKey("right"))
+		{
+			GetComponent<Rigidbody2D>().AddForce(transform.right * maxSpeed);
 		}
 			
 		var mouse = Input.mousePosition;
