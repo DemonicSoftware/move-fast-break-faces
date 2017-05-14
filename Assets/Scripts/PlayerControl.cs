@@ -47,12 +47,17 @@ public class PlayerControl : MonoBehaviour
 		moveVertical = Input.GetAxis("Vertical");
 		anim.SetFloat("speed", Mathf.Abs(moveVertical));
 
-		if (Input.GetKey ("space")) 
-		{
-			anim.SetTrigger ("punch");
-		}
+        //if (Input.GetKey ("space")) 
+        //{
+        //	anim.SetTrigger ("punch");
+        //}
 
-		if(Input.GetKey("up"))
+        if (Input.GetMouseButtonDown(0))
+        {
+            anim.SetTrigger("punch");
+        }
+
+        if (Input.GetKey("up"))
 		{
 			GetComponent<Rigidbody2D>().AddForce(transform.up * maxSpeed * 10);
 		}
