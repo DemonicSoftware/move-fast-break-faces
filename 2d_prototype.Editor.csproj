@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FADB1DA4-65B1-F35E-92A1-A0F81DA3C7E9}</ProjectGuid>
+    <ProjectGuid>{3474FA5E-A5A7-9DC8-654B-2840539D31D3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.0f3</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -52,11 +52,26 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>Library\UnityAssemblies\UnityEngine.TestRunner.dll</HintPath>
@@ -64,17 +79,44 @@
     <Reference Include="nunit.framework">
       <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEditor.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>Library\UnityAssemblies\UnityEditor.VR.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -84,13 +126,46 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerControl.cs" />
-    <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\Action.cs" />
-    <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\ConditionBase.cs" />
-    <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\Physics2DObject.cs" />
-    <Compile Include="Assets\Scripts\Playground Scripts\FollowPlayer.cs" />
-    <Compile Include="Assets\Scripts\Playground Scripts\Utilities\Enums.cs" />
-    <Compile Include="Assets\Scripts\Playground Scripts\Utilities\Utils.cs" />
+    <ProjectReference Include="2d_prototype.csproj">
+      <Project>{FADB1DA4-65B1-F35E-92A1-A0F81DA3C7E9}</Project>
+      <Name>2d_prototype</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Attributes\BulletAttrInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Attributes\CollectableAttrInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Attributes\DestroyForPointsAttrInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Attributes\HealthSystemInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Attributes\ResourceAttrInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\BaseInspectorWindow.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\ConditionInspectorBase.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Conditions\Actions\ConsumeResourceActionInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Conditions\Actions\CreateObjectActionInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Conditions\Actions\DestroyActionInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Conditions\Actions\DialogueBalloonActionInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Conditions\Actions\LoadLevelActionInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Conditions\Actions\OnOffActionInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Conditions\Actions\TeleportActionInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Conditions\ConditionAreaInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Conditions\ConditionCollisionInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Conditions\ConditionKeyPressInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Creation\AutoObjectSpawnerInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Creation\ObjectShooterInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Destruction\ModifyHealthAttributeInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Destruction\TimedSelfDestructInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\DialogueSystemInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\AutoMoveInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\AutoRotationInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\CameraFollowInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\FollowCursorInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\FollowPlayerInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\JumpInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\LookAtCursorInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\MoveWithArrowsInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\PushWithButtonInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\RotateWithArrowsInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\Movement\WanderInspector.cs" />
+    <Compile Include="Assets\Scripts\PlayGroundScripts\Editor\UIScriptInspector.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
