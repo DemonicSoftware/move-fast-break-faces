@@ -37,7 +37,6 @@ public class PlayerControl : MonoBehaviour
 
 		//Utils.SetAxisTowards(lookAxis, transform, cachedDirection);
 
-
 	}
 
 	// Update is called once per frame
@@ -65,14 +64,11 @@ public class PlayerControl : MonoBehaviour
 		{
 			GetComponent<Rigidbody2D>().AddForce(-transform.up * maxSpeed * 10);
 		}
-		if(Input.GetKey("right"))
-		{
-			transform.Rotate(0, 0, -5);
-		}
-		if(Input.GetKey("left"))
-		{
-			transform.Rotate(0, 0, 5);
-		}
-
+			
+		var mouse = Input.mousePosition;
+		var screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
+		var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
+		var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
+		transform.rotation = Quaternion.Euler(0, 0, angle);
 	}
 }
