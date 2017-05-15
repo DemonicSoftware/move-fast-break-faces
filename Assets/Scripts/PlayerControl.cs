@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControl : MonoBehaviour
-{
+public class PlayerControl : MonoBehaviour {
     public float maxSpeed = 10f;
 
 	//public Enums.MovementType movementType = Enums.MovementType.AllDirections;
@@ -18,14 +17,12 @@ public class PlayerControl : MonoBehaviour
     Animator anim;
 
 	// Use this for initialization
-	void Start ()
-    {
+	void Start () {
         anim = GetComponent<Animator>();
 	}
 
 
-	void update()
-	{
+	void update() {
 
 		//float move = Input.GetAxis("Horizontal");
 		Debug.Log("TEST");
@@ -40,8 +37,7 @@ public class PlayerControl : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void FixedUpdate ()
-    {
+	void FixedUpdate () {
 		moveHorizontal = Input.GetAxis("Horizontal");
 		moveVertical = Input.GetAxis("Vertical");
 		anim.SetFloat("speed", Mathf.Abs(moveVertical));
@@ -50,33 +46,30 @@ public class PlayerControl : MonoBehaviour
         //{
         //	anim.SetTrigger ("punch");
         //}
-
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetMouseButtonDown(0)) {
             anim.SetTrigger("punch");
         }
 
-        if (Input.GetKey("up"))
-		{
-			GetComponent<Rigidbody2D>().AddForce(transform.up * maxSpeed);
+        if (Input.GetKey(KeyCode.W)) {
+            transform.Translate(0, maxSpeed * Time.deltaTime, 0);
 		}
-		if(Input.GetKey("down"))
-		{
-			GetComponent<Rigidbody2D>().AddForce(-transform.up * maxSpeed);
+
+        if(Input.GetKey(KeyCode.S)) {
+			transform.Translate(0, -maxSpeed * Time.deltaTime, 0);
 		}
-		if (Input.GetKey("left"))
-		{
-			GetComponent<Rigidbody2D>().AddForce(-transform.right * maxSpeed);
+
+        if (Input.GetKey(KeyCode.A)) {
+			transform.Translate(-maxSpeed * Time.deltaTime, 0, 0);
 		}
-		if (Input.GetKey("right"))
-		{
-			GetComponent<Rigidbody2D>().AddForce(transform.right * maxSpeed);
+
+        if (Input.GetKey(KeyCode.D)) {
+			transform.Translate(maxSpeed * Time.deltaTime, 0, 0);
 		}
 			
 		var mouse = Input.mousePosition;
 		var screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
-		var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
-		var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+		// var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
+		// var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
+		// transform.rotation = Quaternion.Euler(0, 0, angle - 90);
 	}
 }
