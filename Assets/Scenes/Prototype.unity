@@ -684,7 +684,8 @@ GameObject:
   - component: {fileID: 572358486}
   - component: {fileID: 572358485}
   - component: {fileID: 572358489}
-  - component: {fileID: 572358490}
+  - component: {fileID: 572358491}
+  - component: {fileID: 572358492}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -715,7 +716,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.62, y: 0.48}
+  m_Size: {x: 0.62, y: 0.87}
   m_EdgeRadius: 0
 --- !u!50 &572358486
 Rigidbody2D:
@@ -729,11 +730,11 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 5
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -807,7 +808,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &572358490
+--- !u!114 &572358491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -815,10 +816,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 572358484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41170b50c4adbc5409ef7541b98078a1, type: 3}
+  m_Script: {fileID: 11500000, guid: a97d5be67c033f046bf2b5c016da895a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  useSide: 0
+--- !u!114 &572358492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 572358484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f05a929323e38cf458483ff308429de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody2D: {fileID: 0}
+  typeOfControl: 0
+  speed: 10
+  movementType: 0
+  orientToDirection: 0
+  lookAxis: 0
 --- !u!1 &581611783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,6 +1974,21 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114484360923673908, guid: 138c08d2ac6722d438da22e86ca08abb,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50180812328393456, guid: 138c08d2ac6722d438da22e86ca08abb,
+        type: 2}
+      propertyPath: m_LinearDrag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 50180812328393456, guid: 138c08d2ac6722d438da22e86ca08abb,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 138c08d2ac6722d438da22e86ca08abb, type: 2}

@@ -89,6 +89,8 @@
     <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\ConditionBase.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\Physics2DObject.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\FollowPlayer.cs" />
+    <Compile Include="Assets\Scripts\Playground Scripts\LookAtCursor.cs" />
+    <Compile Include="Assets\Scripts\Playground Scripts\MoveWithArrows.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\Utilities\Enums.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\Utilities\Utils.cs" />
   </ItemGroup>
