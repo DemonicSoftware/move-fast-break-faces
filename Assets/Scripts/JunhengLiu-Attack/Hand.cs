@@ -33,6 +33,8 @@ public class Hand : MonoBehaviour {
             rb2d.position = rb2d.position + movement;
             range -= 1;
         }
-        //Destroy(gameObject);
+        else
+            Destroy(gameObject);
+            //gameObject.SetActive(false);
     }
 }

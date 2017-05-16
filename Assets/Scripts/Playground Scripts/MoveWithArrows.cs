@@ -57,7 +57,7 @@ public class MoveWithArrows : Physics2DObject
 		}
 			
 		movement = new Vector2(moveHorizontal, moveVertical);
- 
+ // weapon direction calculation, face to mouse cursor 
         Vector3 pointInSpace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 directionToLookAt = (pointInSpace - transform.position).normalized;
         weapon.direction = directionToLookAt; new Vector2(getDirection(moveHorizontal), getDirection(moveVertical));

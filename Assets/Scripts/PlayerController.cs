@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour {
 	public Text healthText;
 
 	void Start () {
-        health = new Health(5);
+        //health = new Health(5);
+        health = GetComponent<Health>();
         healthText.text = health.getHealth().ToString();
 	}
 
