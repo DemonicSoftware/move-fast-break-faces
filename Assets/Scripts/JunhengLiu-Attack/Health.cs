@@ -7,6 +7,7 @@ public class Health : MonoBehaviour {
    public bool isEnemy = true;
     public float damageCooldown = 1;
     private Animator anim;
+  public Text scoreText;
 
    // Use this for initialization
    void Start ()
