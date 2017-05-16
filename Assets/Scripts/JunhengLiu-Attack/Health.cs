@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour {
    public int HP = 5;
    public bool isEnemy = true;
-    public float damageCooldown = 2;
+    public float damageCooldown = 1;
     private Animator anim;
 
    // Use this for initialization
@@ -27,12 +27,19 @@ public class Health : MonoBehaviour {
 
       if (HP <= 0)
       {
-            anim.SetBool("dead", true);
-            GetComponent<FollowPlayer>().enabled = false;
-            GetComponent<AudioSource>().enabled = false;
-            
-            // To give the animation some time to run
-            StartCoroutine(DestroyObject());
+            if (isEnemy)
+            {
+                anim.SetBool("dead", true);
+                GetComponent<FollowPlayer>().enabled = false;
+                GetComponent<AudioSource>().enabled = false;
+
+                // To give the animation some time to run
+                StartCoroutine(DestroyObject());
+            }
+            if (!isEnemy)
+            {
+                Destroy(gameObject);
+            }
        }
    }
     public Health(int startingHealth)
@@ -103,7 +110,7 @@ public class Health : MonoBehaviour {
         {
             if (otherCollider.gameObject.tag == "Enemy" && damageCooldown <= 0)
             {
-                damageCooldown = 2;
+                damageCooldown = 1;
                 Damage(1);
             }
         }
