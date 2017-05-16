@@ -862,7 +862,7 @@ MonoBehaviour:
   CanAttack: 1
   direction: {x: 1, y: 0}
   gun: 1
-  gunAmmo: 10
+  gunAmmo: 100
   hand: 1
   sword: 1
   currentWeapon: hand
@@ -2148,6 +2148,10 @@ Prefab:
     - target: {fileID: 4278610943295256, guid: 138c08d2ac6722d438da22e86ca08abb, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303154991411114, guid: 138c08d2ac6722d438da22e86ca08abb, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 138c08d2ac6722d438da22e86ca08abb, type: 2}

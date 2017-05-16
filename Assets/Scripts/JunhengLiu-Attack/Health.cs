@@ -93,4 +93,16 @@ public class Health : MonoBehaviour {
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
+
+    void OnCollision2DEnter(Collider2D otherCollider)
+    {
+        if(!isEnemy)
+        {
+            if (otherCollider.tag == "Enemy")
+            {
+                HP = HP - 1;
+            }
+        }
+
+    }
 }

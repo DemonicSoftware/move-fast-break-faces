@@ -11,16 +11,26 @@ public class Shot : MonoBehaviour {
    private Rigidbody2D rb2d;
    public bool isEnemy = false;
     public int time = 20;
-	void Start () {
-        movement = new Vector2(direction.x, direction.y);
+    public Enums.Directions useSide = Enums.Directions.Up;
+
+    void Start () {
         rb2d = GetComponent<Rigidbody2D>();
+        movement = new Vector2(direction.x, direction.y);
       // Limited time to live to avoid any leak
       Destroy(gameObject, time); //sec
    }
 
    void Update()
    {
-   }
+        Vector3 pointInSpace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //adjust the Z, because the Camera is at -10f on the Z!
+        pointInSpace.z = 0f;
+        //calculate the direction
+        Vector3 directionToLookAt = (pointInSpace - transform.position).normalized;
+        //orient the object
+        Utils.SetAxisTowards(useSide, transform, directionToLookAt);
+        transform.Rotate(new Vector3(0, 0, 90));
+    }
 
    void FixedUpdate()
    {
