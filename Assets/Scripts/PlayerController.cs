@@ -5,27 +5,32 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	public Health health;
+	private Health health;
 	public Text healthText;
+    public Text scoreText;
+    public Text endText;
+    public Text endScore;
 
 	void Start () {
-        //health = new Health(5);
+        endText.enabled = false;
+        endScore.enabled = false;
         health = GetComponent<Health>();
         healthText.text = health.getHealth().ToString();
 	}
 
-
-	void update() {
-	}
-
 	void FixedUpdate() {
-        if (Input.GetKey(KeyCode.X)) {
-            health.dealDamage(1);
-        }
+        healthText.text = "Health: " + health.getHealth().ToString();
+        scoreText.text = "Faces Broken: " + (1).ToString();
 
-        if (Input.GetKey(KeyCode.Z)) {
-            health.refillHealth();
+        if (isDead()) {
+            GetComponent<SpriteRenderer>().enabled = false;
+            endText.enabled = true;
+            endScore.text = "Total Faces Broken: " + (1).ToString();
+            endScore.enabled = true;
         }
-        healthText.text = health.getHealth().ToString();
 	}
+
+    bool isDead() {
+        return health.getHealth() <= 0;
+    }
 }
