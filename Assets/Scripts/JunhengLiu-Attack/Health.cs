@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour {
    public int HP = 5;
    public bool isEnemy = true;
-
+    public float damageCooldown = 2;
     private Animator anim;
 
    // Use this for initialization
@@ -16,8 +16,11 @@ public class Health : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (damageCooldown > 0)
+        {
+            damageCooldown -= Time.deltaTime;
+        }
+    }
    public void Damage(int damageCount)
    {
       HP -= damageCount;
@@ -94,13 +97,14 @@ public class Health : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    void OnCollision2DEnter(Collider2D otherCollider)
+    private void OnCollisionEnter2D(Collision2D otherCollider)
     {
-        if(!isEnemy)
+        if (!isEnemy)
         {
-            if (otherCollider.tag == "Enemy")
+            if (otherCollider.gameObject.tag == "Enemy" && damageCooldown <= 0)
             {
-                HP = HP - 1;
+                damageCooldown = 2;
+                Damage(1);
             }
         }
 
