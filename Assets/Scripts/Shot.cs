@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Shot : MonoBehaviour {
+	
 	public int damage = 1;
 	public float speed = 100;
 	public Vector2 direction = new Vector2(1, 0);
