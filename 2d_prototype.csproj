@@ -85,7 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
-    <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\Scripts\JunhengLiu-Attack\Hand.cs" />
+    <Compile Include="Assets\Scripts\JunhengLiu-Attack\Health.cs" />
+    <Compile Include="Assets\Scripts\JunhengLiu-Attack\Shot.cs" />
+    <Compile Include="Assets\Scripts\JunhengLiu-Attack\Weapon.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\Action.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\ConditionBase.cs" />

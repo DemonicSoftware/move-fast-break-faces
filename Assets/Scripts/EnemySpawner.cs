@@ -15,7 +15,9 @@ public class EnemySpawner : MonoBehaviour
 	// Configure the spawning pattern
 	public int spawnNumberID = 1;
 
-    private float spawnInterval = 32;
+    public float spawnInterval = 32;
+    public int waitOffset = 8;
+
     private float initalWait;
     private bool waited = false;
 
@@ -26,16 +28,16 @@ public class EnemySpawner : MonoBehaviour
         switch(spawnNumberID)
         {
             case 1:
-                initalWait = 0;
+                initalWait = waitOffset * 0;
                 break;
             case 2:
-                initalWait = 8;
+                initalWait = waitOffset * 1;
                 break;
             case 3:
-                initalWait = 16;
+                initalWait = waitOffset * 2;
                 break;
             case 4:
-                initalWait = 24;
+                initalWait = waitOffset * 3;
                 break;
 
         }
