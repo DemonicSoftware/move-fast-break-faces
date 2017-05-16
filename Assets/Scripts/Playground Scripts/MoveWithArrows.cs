@@ -57,10 +57,10 @@ public class MoveWithArrows : Physics2DObject
 		}
 			
 		movement = new Vector2(moveHorizontal, moveVertical);
-        if (movement.x != 0 || movement.y != 0)
-        {
-            weapon.direction = new Vector2(getDirection(moveHorizontal), getDirection(moveVertical));
-        }
+ 
+        Vector3 pointInSpace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 directionToLookAt = (pointInSpace - transform.position).normalized;
+        weapon.direction = directionToLookAt; new Vector2(getDirection(moveHorizontal), getDirection(moveVertical));
 
         //rotate the gameObject towards the direction of movement
         //the axis to look can be decided with the "axis" variable
