@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -21,10 +21,12 @@ public class MoveWithArrows : Physics2DObject
 	private float moveVertical;
 
     Animator anim;
-
+    // about attack
+    private Weapon weapon;
     void Start()
     {
         anim = GetComponent<Animator>();
+        weapon = GetComponent<Weapon>();
     }
 
 
@@ -55,11 +57,14 @@ public class MoveWithArrows : Physics2DObject
 		}
 			
 		movement = new Vector2(moveHorizontal, moveVertical);
+        if (movement.x != 0 || movement.y != 0)
+        {
+            weapon.direction = new Vector2(getDirection(moveHorizontal), getDirection(moveVertical));
+        }
 
-
-		//rotate the gameObject towards the direction of movement
-		//the axis to look can be decided with the "axis" variable
-		if(orientToDirection)
+        //rotate the gameObject towards the direction of movement
+        //the axis to look can be decided with the "axis" variable
+        if (orientToDirection)
 		{
 			if(movement.sqrMagnitude >= 0.01f)
 			{
@@ -82,5 +87,35 @@ public class MoveWithArrows : Physics2DObject
         }
         // Apply the force to the Rigidbody2d
         rigidbody2D.AddForce(movement * speed * 10f);
-	}
+
+        //about attack
+        if (Input.GetButtonDown("changeWeapon"))
+        {
+            weapon.changeWeapon();
+        }
+        bool fire = Input.GetButtonDown("Fire1");
+
+        //if (Input.GetKey(KeyCode.F))
+        if (fire)
+        {
+            //weapon = GetComponent<Weapon>();
+            if (weapon != null)
+            {
+
+                //weapon.direction = movement;               
+                // false because the player is not an enemy
+                weapon.Attack(false);
+                anim.SetTrigger("punch");
+            }
+        }
+    }
+    int getDirection(float x)
+    {
+        int output = 0;
+        if (x > 0)
+            output = 1;
+        if (x < 0)
+            output = -1;
+        return output;
+    }
 }
