@@ -23,16 +23,14 @@ public class Health : MonoBehaviour {
         }
     }
 
-	public void Damage(int damageCount)
-	{
+	public void Damage(int damageCount) {
 		HP -= damageCount;
 
-		if (HP <= 0)
-		{
-			if (isEnemy)
-			{
+		if (HP <= 0) {
+			if (isEnemy) {
 				anim.SetBool("dead", true);
 				GetComponent<FollowPlayer>().enabled = false;
+
 				zombieAudio = GetComponents<AudioSource>();
 				zombieAudio[0].enabled = false;
 				zombieAudio[1].Play();
@@ -41,8 +39,7 @@ public class Health : MonoBehaviour {
 				StartCoroutine(DestroyObject());
 			}
 
-			if (!isEnemy)
-			{
+			if (!isEnemy) {
 				GetComponent<AudioSource>().Play();
 				Destroy(gameObject);
 			}

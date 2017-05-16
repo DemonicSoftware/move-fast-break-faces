@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
-    public Transform Shots;
+	public Transform Shots;
     public Transform hands;
     public float shootingRate = 0.25f;
     private float shootCooldown = 0;
@@ -16,34 +16,28 @@ public class Weapon : MonoBehaviour {
     public bool hand = true;
     public bool sword = true;
     public string currentWeapon = "hand";
-    void Start () {
+    
+	void Start () {
+		
+	}
 
-   }
-
-
-   void Update()
-   {
-        if (shootCooldown > 0)
-        {
+	void Update() {
+		if (shootCooldown > 0) {
             shootCooldown -= Time.deltaTime;
         }
-        if (shootCooldown <= 0f)
-        {
+        if (shootCooldown <= 0f) {
             CanAttack = true;
         }
-        else
-        {
+        else {
             CanAttack = false;
         }
     }
 
 
-    public void Attack(bool isEnemy)
-    {
-        if (CanAttack)
-        {
-            if (currentWeapon == "gun"&& gun==true)
-            {
+    public void Attack(bool isEnemy) {
+        if (CanAttack) {
+            if (currentWeapon == "gun"&& gun==true) {
+				
                 shootCooldown = shootingRate;
 
                 // Create a new shot
@@ -54,19 +48,19 @@ public class Weapon : MonoBehaviour {
 
                 Shot shot = shotTransform.gameObject.GetComponent<Shot>();
                 shot.direction = this.direction;
+
                 // The is enemy property
-                if (shot != null)
-                {
+                if (shot != null) {
                     shot.isEnemy = isEnemy;
                 }
+
                 gunAmmo -= 1;
-                if (gunAmmo <= 0)
-                {
+
+                if (gunAmmo <= 0) {
                     gun = false;
                 }
             }
-            else if (currentWeapon == "hand")
-            {
+            else if (currentWeapon == "hand") {
                 shootCooldown = shootingRate;
 
                 // Create a new shot
@@ -77,18 +71,16 @@ public class Weapon : MonoBehaviour {
 
                 Hand handAttack = handTransform.gameObject.GetComponent<Hand>();
                 handAttack.direction = this.direction;
+
                 // The is enemy property
-                if (handAttack != null)
-                {
+                if (handAttack != null) {
                     handAttack.isEnemy = isEnemy;
                 }
             }
-            else if(currentWeapon == "sword"&& sword == true)
-            {
+            else if(currentWeapon == "sword"&& sword == true) {
 
             }
-            else
-            {
+            else {
                 changeWeapon();
             }
         }
@@ -102,19 +94,13 @@ public class Weapon : MonoBehaviour {
         }
     }*/
 
-    public void changeWeapon()
-    {
-            if(currentWeapon == "hand" )
-            {
-                currentWeapon = "sword";
-            }
-            else if (currentWeapon == "sword" )
-            {
-                currentWeapon = "gun";
-            }
-            else if (currentWeapon == "gun" )
-            {
-                currentWeapon = "hand";
-            }
-    }
+    public void changeWeapon() {
+		if (currentWeapon == "hand") {
+			currentWeapon = "sword";
+		} else if (currentWeapon == "sword") {
+			currentWeapon = "gun";
+		} else if (currentWeapon == "gun") {
+			currentWeapon = "hand";
+		}
+	}
 }

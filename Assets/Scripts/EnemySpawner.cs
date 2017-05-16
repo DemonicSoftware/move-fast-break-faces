@@ -2,8 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class EnemySpawner : MonoBehaviour
-{
+public class EnemySpawner : MonoBehaviour {
 	[Header("Object creation")]
 
 	// The object to spawn
@@ -23,10 +22,8 @@ public class EnemySpawner : MonoBehaviour
 
 	private BoxCollider2D boxCollider2D;
 
-	void Start ()
-	{
-        switch(spawnNumberID)
-        {
+	void Start () {
+        switch(spawnNumberID) {
             case 1:
                 initalWait = waitOffset * 0;
                 break;
@@ -39,34 +36,25 @@ public class EnemySpawner : MonoBehaviour
             case 4:
                 initalWait = waitOffset * 3;
                 break;
-
-        }
-
+		}
 
 		boxCollider2D = GetComponent<BoxCollider2D>();
 
 		StartCoroutine(SpawnObject());
-
-
-
 	}
 	
 	// This will spawn an object, and then wait some time, then spawn another...
-	IEnumerator SpawnObject ()
-	{
-        if(!waited)
-        {
+	IEnumerator SpawnObject () {
+		if(!waited) {
             waited = true;
             yield return new WaitForSeconds(initalWait);
         }
-		while(true)
-		{
+
+		while(true) {
             if(spawnInterval > 2)
             {
                 spawnInterval -= 1f;
             }
-            
-
 			// Create some random numbers
 			float randomX = Random.Range (-boxCollider2D.size.x, boxCollider2D.size.x) *.5f;
 			float randomY = Random.Range (-boxCollider2D.size.y, boxCollider2D.size.y) *.5f;

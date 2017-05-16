@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-
 	private Health health;
 	public Text healthText;
     public Text scoreText;

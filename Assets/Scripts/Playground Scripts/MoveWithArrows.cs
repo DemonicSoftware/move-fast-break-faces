@@ -2,8 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class MoveWithArrows : Physics2DObject
-{
+public class MoveWithArrows : Physics2DObject {
 	[Header("Input keys")]
 	public Enums.KeyGroups typeOfControl = Enums.KeyGroups.ArrowKeys;
 
@@ -23,31 +22,27 @@ public class MoveWithArrows : Physics2DObject
     Animator anim;
     // about attack
     private Weapon weapon;
-    void Start()
-    {
+
+    void Start() {
         anim = GetComponent<Animator>();
         weapon = GetComponent<Weapon>();
     }
 
 
     // Update gets called every frame
-    void Update ()
-	{	
+    void Update () {	
 		// Moving with the arrow keys
-		if(typeOfControl == Enums.KeyGroups.ArrowKeys)
-		{
+		if(typeOfControl == Enums.KeyGroups.ArrowKeys) {
 			moveHorizontal = Input.GetAxis("Horizontal");
 			moveVertical = Input.GetAxis("Vertical");
 		}
-		else
-		{
+		else {
 			moveHorizontal = Input.GetAxis("Horizontal2");
 			moveVertical = Input.GetAxis("Vertical2");
 		}
 
 		//zero-out the axes that are not needed, if the movement is constrained
-		switch(movementType)
-		{
+		switch(movementType) {
 			case Enums.MovementType.OnlyHorizontal:
 				moveVertical = 0f;
 				break;
@@ -57,15 +52,14 @@ public class MoveWithArrows : Physics2DObject
 		}
 			
 		movement = new Vector2(moveHorizontal, moveVertical);
- // weapon direction calculation, face to mouse cursor 
+ 		// weapon direction calculation, face to mouse cursor 
         Vector3 pointInSpace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 directionToLookAt = (pointInSpace - transform.position).normalized;
         weapon.direction = directionToLookAt; new Vector2(getDirection(moveHorizontal), getDirection(moveVertical));
 
         //rotate the gameObject towards the direction of movement
         //the axis to look can be decided with the "axis" variable
-        if (orientToDirection)
-		{
+        if (orientToDirection) {
 			if(movement.sqrMagnitude >= 0.01f)
 			{
 				cachedDirection = movement;
@@ -77,27 +71,23 @@ public class MoveWithArrows : Physics2DObject
 
 
 	// FixedUpdate is called every frame when the physics are calculated
-	void FixedUpdate ()
-	{
+	void FixedUpdate () {
         anim.SetFloat("speed", Mathf.Abs(moveVertical + moveHorizontal));
 
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetMouseButtonDown(0)) {
             anim.SetTrigger("punch");
         }
         // Apply the force to the Rigidbody2d
         rigidbody2D.AddForce(movement * speed * 10f);
 
         //about attack
-        if (Input.GetButtonDown("changeWeapon"))
-        {
+        if (Input.GetButtonDown("changeWeapon")) {
             weapon.changeWeapon();
         }
         bool fire = Input.GetButtonDown("Fire1");
 
         //if (Input.GetKey(KeyCode.F))
-        if (fire)
-        {
+        if (fire) {
             //weapon = GetComponent<Weapon>();
             if (weapon != null)
             {
@@ -109,8 +99,8 @@ public class MoveWithArrows : Physics2DObject
             }
         }
     }
-    int getDirection(float x)
-    {
+
+    int getDirection(float x) {
         int output = 0;
         if (x > 0)
             output = 1;

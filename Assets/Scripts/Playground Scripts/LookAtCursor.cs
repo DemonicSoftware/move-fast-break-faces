@@ -5,8 +5,7 @@ public class LookAtCursor : MonoBehaviour
 {
 	public Enums.Directions useSide = Enums.Directions.Up;
 	
-	void Update ()
-	{
+	void Update () {
 		Vector3 pointInSpace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		//adjust the Z, because the Camera is at -10f on the Z!
 		pointInSpace.z = 0f;
