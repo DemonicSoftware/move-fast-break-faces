@@ -6,9 +6,12 @@ public class Health : MonoBehaviour {
    public int HP = 5;
    public bool isEnemy = true;
 
+    private Animator anim;
+
    // Use this for initialization
-   void Start () {
-		
+   void Start ()
+    {
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -21,9 +24,13 @@ public class Health : MonoBehaviour {
 
       if (HP <= 0)
       {
-         // Dead!
-         Destroy(gameObject);
-      }
+            anim.SetBool("dead", true);
+            GetComponent<FollowPlayer>().enabled = false;
+            GetComponent<AudioSource>().enabled = false;
+            
+            // To give the animation some time to run
+            StartCoroutine(DestroyObject());
+       }
    }
     public Health(int startingHealth)
     {
@@ -74,10 +81,16 @@ public class Health : MonoBehaviour {
             if (hand.isEnemy != isEnemy)
             {
                 Damage(hand.damage);
-
+      
                 // Destroy the shot
                 Destroy(hand.gameObject); // Remember to always target the game object, otherwise you will just remove the script
             }
         }
+    }
+
+    IEnumerator DestroyObject()
+    {
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
     }
 }
