@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Health.cs" />
-     <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\Action.cs" />
      <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\ConditionBase.cs" />
