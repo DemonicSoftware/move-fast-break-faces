@@ -8,6 +8,7 @@ public class Health : MonoBehaviour {
     public bool isEnemy = true;
     public float damageCooldown = 1;
     private Animator anim;
+	private AudioSource[] zombieAudio;
     public Text scoreText;
 
    // Use this for initialization
@@ -22,23 +23,31 @@ public class Health : MonoBehaviour {
         }
     }
 
-    public void Damage(int damageCount) {
-        HP -= damageCount;
+	public void Damage(int damageCount)
+	{
+		HP -= damageCount;
 
-        if (HP <= 0) {
-            if (isEnemy) {
-                anim.SetBool("dead", true);
-                GetComponent<FollowPlayer>().enabled = false;
-                GetComponent<AudioSource>().enabled = false;
+		if (HP <= 0)
+		{
+			if (isEnemy)
+			{
+				anim.SetBool("dead", true);
+				GetComponent<FollowPlayer>().enabled = false;
+				zombieAudio = GetComponents<AudioSource>();
+				zombieAudio[0].enabled = false;
+				zombieAudio[1].Play();
 
-                // To give the animation some time to run
-                StartCoroutine(DestroyObject());
-            }
-            if (!isEnemy) {
-                
-            }
-        }
-    }
+				// To give the animation some time to run
+				StartCoroutine(DestroyObject());
+			}
+
+			if (!isEnemy)
+			{
+				GetComponent<AudioSource>().Play();
+				Destroy(gameObject);
+			}
+		}
+	}
 
     public Health(int startingHealth) {
         HP = startingHealth;

@@ -84,7 +84,6 @@ public class MoveWithArrows : Physics2DObject
         if (Input.GetMouseButtonDown(0))
         {
             anim.SetTrigger("punch");
-			GetComponent<AudioSource>().Play();
         }
         // Apply the force to the Rigidbody2d
         rigidbody2D.AddForce(movement * speed * 10f);
