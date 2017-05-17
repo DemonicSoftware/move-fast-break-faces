@@ -51,10 +51,11 @@ public class EnemySpawner : MonoBehaviour {
         }
 
 		while(true) {
-            if(spawnInterval > 2)
-            {
-                spawnInterval -= 1f;
-            }
+//            if(spawnInterval > 2)
+//            {
+//                spawnInterval -= 1f;
+//            }
+			spawnInterval -= 1f;
 			// Create some random numbers
 			float randomX = Random.Range (-boxCollider2D.size.x, boxCollider2D.size.x) *.5f;
 			float randomY = Random.Range (-boxCollider2D.size.y, boxCollider2D.size.y) *.5f;

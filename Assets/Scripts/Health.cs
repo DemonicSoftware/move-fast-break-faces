@@ -41,7 +41,6 @@ public class Health : MonoBehaviour {
 
 			if (!isEnemy) {
 				GetComponent<AudioSource>().Play();
-				Destroy(gameObject);
 			}
 		}
 	}
