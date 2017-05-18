@@ -30,6 +30,7 @@ public class Health : MonoBehaviour {
 			if (isEnemy) {
 				anim.SetBool("dead", true);
 				GetComponent<FollowPlayer>().enabled = false;
+                GetComponent<Collider2D>().enabled = false;
 
 				zombieAudio = GetComponents<AudioSource>();
 				zombieAudio[0].enabled = false;
