@@ -1064,7 +1064,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1068892687358396, guid: 2331cdfd402a29e4785b1bf80a7a028b,
     type: 2}
   m_PrefabInternal: {fileID: 2096087632}
---- !u!114 &572358493
+--- !u!114 &572358485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1072,18 +1072,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 572358484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d97782a6962a84ca5718cf2557d8f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 206c72431d84e46409df0abd66571e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shots: {fileID: 4392926878520968, guid: b7290653e141a9246b9ba03df08a30eb, type: 2}
-  hands: {fileID: 4615652463054736, guid: bd9d5bdaf74d8734c9f6a4ebec3b1dd5, type: 2}
+  range: {fileID: 4392926878520968, guid: b7290653e141a9246b9ba03df08a30eb, type: 2}
+  melee: {fileID: 4615652463054736, guid: bd9d5bdaf74d8734c9f6a4ebec3b1dd5, type: 2}
   shootingRate: 0.25
   CanAttack: 1
   direction: {x: 1, y: 0}
   gun: 1
-  gunAmmo: 10
+  gunAmmo: 100
   hand: 1
-  sword: 1
+  sword: 0
   currentWeapon: hand
 --- !u!82 &572358494
 AudioSource:

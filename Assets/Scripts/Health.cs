@@ -70,26 +70,26 @@ public class Health : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D otherCollider) {
         // Is this a shot?
-        Shot shot = otherCollider.gameObject.GetComponent<Shot>();
-        Hand hand = otherCollider.gameObject.GetComponent<Hand>();
-        if (shot != null) {
+        RangeAttack range = otherCollider.gameObject.GetComponent<RangeAttack>();
+        MeleeAttack melee = otherCollider.gameObject.GetComponent<MeleeAttack>();
+        if (range != null) {
             // Avoid friendly fire
-            if (shot.isEnemy != isEnemy) {
-                Damage(shot.damage);
+            if (range.isEnemy != isEnemy) {
+                Damage(range.damage);
 
                 // Destroy the shot
-                Destroy(shot.gameObject); 
+                Destroy(range.gameObject); 
                 // Remember to always target the game object, otherwise you will just remove the script
             }
         }
 
-        if (hand != null) {
+        if (melee != null) {
             // Avoid friendly fire
-            if (hand.isEnemy != isEnemy) {
-                Damage(hand.damage);
+            if (melee.isEnemy != isEnemy) {
+                Damage(melee.damage);
       
                 // Destroy the shot
-                Destroy(hand.gameObject); 
+                Destroy(melee.gameObject); 
                 // Remember to always target the game object, otherwise you will just remove the script
             }
         }

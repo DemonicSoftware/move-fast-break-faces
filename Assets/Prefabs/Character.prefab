@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114458951763851160}
   - component: {fileID: 114593021695190242}
   - component: {fileID: 114629777651525654}
+  - component: {fileID: 114629890316783258}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -149,6 +150,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthText: {fileID: 0}
+  scoreText: {fileID: 0}
+  endText: {fileID: 0}
+  endScore: {fileID: 0}
+--- !u!114 &114629890316783258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068892687358396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 206c72431d84e46409df0abd66571e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: {fileID: 4392926878520968, guid: b7290653e141a9246b9ba03df08a30eb, type: 2}
+  melee: {fileID: 4615652463054736, guid: bd9d5bdaf74d8734c9f6a4ebec3b1dd5, type: 2}
+  shootingRate: 0.25
+  CanAttack: 1
+  direction: {x: 1, y: 0}
+  gun: 1
+  gunAmmo: 100
+  hand: 1
+  sword: 0
+  currentWeapon: hand
 --- !u!212 &212529386993627048
 SpriteRenderer:
   m_ObjectHideFlags: 1

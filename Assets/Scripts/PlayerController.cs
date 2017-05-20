@@ -9,15 +9,27 @@ public class PlayerController : MonoBehaviour {
     public Text scoreText;
     public Text endText;
     public Text endScore;
-
-	void Start () {
+    private Combat combat;
+    private Animator anim;
+    void Start () {
         endText.enabled = false;
         endScore.enabled = false;
         health = GetComponent<Health>();
         healthText.text = health.getHealth().ToString();
-	}
+        combat = GetComponent<Combat>();
 
-	void FixedUpdate() {
+        anim = GetComponent<Animator>();
+    }
+    private void Update()
+    {
+        // weapon direction calculation, face to mouse cursor 
+        Vector3 pointInSpace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 directionToLookAt = (pointInSpace - transform.position).normalized;
+        combat.direction = directionToLookAt; 
+
+    }
+
+    void FixedUpdate() {
         healthText.text = "Health: " + health.getHealth().ToString();
         scoreText.text = "Faces Broken: " + (1).ToString();
 
@@ -27,7 +39,25 @@ public class PlayerController : MonoBehaviour {
             endScore.text = "Total Faces Broken: " + (1).ToString();
             endScore.enabled = true;
         }
-	}
+
+        //about attack
+        if (Input.GetButtonDown("changeWeapon"))
+        {
+            combat.changeWeapon();
+        }
+        bool fire = Input.GetButtonDown("Fire1");
+
+        //if (Input.GetKey(KeyCode.F))
+        if (fire)
+        {
+            if (combat != null)
+            {
+                // false because the player is not an enemy
+                combat.Attack(false);
+                anim.SetTrigger("punch");
+            }
+        }
+    }
 
     bool isDead() {
         return health.getHealth() <= 0;

@@ -21,11 +21,9 @@ public class MoveWithArrows : Physics2DObject {
 
     Animator anim;
     // about attack
-    private Weapon weapon;
 
     void Start() {
         anim = GetComponent<Animator>();
-        weapon = GetComponent<Weapon>();
     }
 
 
@@ -52,10 +50,6 @@ public class MoveWithArrows : Physics2DObject {
 		}
 			
 		movement = new Vector2(moveHorizontal, moveVertical);
- 		// weapon direction calculation, face to mouse cursor 
-        Vector3 pointInSpace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 directionToLookAt = (pointInSpace - transform.position).normalized;
-        weapon.direction = directionToLookAt; new Vector2(getDirection(moveHorizontal), getDirection(moveVertical));
 
         //rotate the gameObject towards the direction of movement
         //the axis to look can be decided with the "axis" variable
@@ -80,24 +74,7 @@ public class MoveWithArrows : Physics2DObject {
         // Apply the force to the Rigidbody2d
         rigidbody2D.AddForce(movement * speed * 10f);
 
-        //about attack
-        if (Input.GetButtonDown("changeWeapon")) {
-            weapon.changeWeapon();
-        }
-        bool fire = Input.GetButtonDown("Fire1");
 
-        //if (Input.GetKey(KeyCode.F))
-        if (fire) {
-            //weapon = GetComponent<Weapon>();
-            if (weapon != null)
-            {
-
-                //weapon.direction = movement;               
-                // false because the player is not an enemy
-                weapon.Attack(false);
-                anim.SetTrigger("punch");
-            }
-        }
     }
 
     int getDirection(float x) {

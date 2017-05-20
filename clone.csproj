@@ -78,11 +78,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Combat.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
-    <Compile Include="Assets\Scripts\JunhengLiu-Attack\Hand.cs" />
-    <Compile Include="Assets\Scripts\JunhengLiu-Attack\Health.cs" />
-    <Compile Include="Assets\Scripts\JunhengLiu-Attack\Shot.cs" />
-    <Compile Include="Assets\Scripts\JunhengLiu-Attack\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\Scripts\MeleeAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\Action.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\BaseClasses\ConditionBase.cs" />
@@ -92,6 +91,7 @@
     <Compile Include="Assets\Scripts\Playground Scripts\MoveWithArrows.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\Utilities\Enums.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\Utilities\Utils.cs" />
+    <Compile Include="Assets\Scripts\RangeAttack.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
