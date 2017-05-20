@@ -68,32 +68,32 @@ public class Health : MonoBehaviour {
         return HP;
     }
 
-    void OnTriggerEnter2D(Collider2D otherCollider) {
-        // Is this a shot?
-        RangeAttack range = otherCollider.gameObject.GetComponent<RangeAttack>();
-        MeleeAttack melee = otherCollider.gameObject.GetComponent<MeleeAttack>();
-        if (range != null) {
-            // Avoid friendly fire
-            if (range.isEnemy != isEnemy) {
-                Damage(range.damage);
+    //void OnTriggerEnter2D(Collider2D otherCollider) {
+    //    // Is this a shot?
+    //    //RangeAttack range = otherCollider.gameObject.GetComponent<RangeAttack>();
+    //    //MeleeAttack melee = otherCollider.gameObject.GetComponent<MeleeAttack>();
+    //    if (range != null) {
+    //        // Avoid friendly fire
+    //        if (range.isEnemy != isEnemy) {
+    //            Damage(range.damage);
 
-                // Destroy the shot
-                Destroy(range.gameObject); 
-                // Remember to always target the game object, otherwise you will just remove the script
-            }
-        }
+    //            // Destroy the shot
+    //            Destroy(range.gameObject); 
+    //            // Remember to always target the game object, otherwise you will just remove the script
+    //        }
+    //    }
 
-        if (melee != null) {
-            // Avoid friendly fire
-            if (melee.isEnemy != isEnemy) {
-                Damage(melee.damage);
+    //    if (melee != null) {
+    //        // Avoid friendly fire
+    //        if (melee.isEnemy != isEnemy) {
+    //            Damage(melee.damage);
       
-                // Destroy the shot
-                Destroy(melee.gameObject); 
-                // Remember to always target the game object, otherwise you will just remove the script
-            }
-        }
-    }
+    //            // Destroy the shot
+    //            Destroy(melee.gameObject); 
+    //            // Remember to always target the game object, otherwise you will just remove the script
+    //        }
+    //    }
+    //}
 
     IEnumerator DestroyObject() {
         yield return new WaitForSeconds(2);

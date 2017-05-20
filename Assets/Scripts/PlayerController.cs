@@ -9,14 +9,14 @@ public class PlayerController : MonoBehaviour {
     public Text scoreText;
     public Text endText;
     public Text endScore;
-    private Combat combat;
+    //private Combat combat;
     private Animator anim;
     void Start () {
         endText.enabled = false;
         endScore.enabled = false;
         health = GetComponent<Health>();
         healthText.text = health.getHealth().ToString();
-        combat = GetComponent<Combat>();
+        //combat = GetComponent<Combat>();
 
         anim = GetComponent<Animator>();
     }
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
         // weapon direction calculation, face to mouse cursor 
         Vector3 pointInSpace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 directionToLookAt = (pointInSpace - transform.position).normalized;
-        combat.direction = directionToLookAt; 
+        //combat.direction = directionToLookAt; 
 
     }
 
@@ -43,19 +43,19 @@ public class PlayerController : MonoBehaviour {
         //about attack
         if (Input.GetButtonDown("changeWeapon"))
         {
-            combat.changeWeapon();
+            //combat.changeWeapon();
         }
         bool fire = Input.GetButtonDown("Fire1");
 
         //if (Input.GetKey(KeyCode.F))
         if (fire)
         {
-            if (combat != null)
-            {
-                // false because the player is not an enemy
-                combat.Attack(false);
-                anim.SetTrigger("punch");
-            }
+            //if (combat != null)
+            //{
+            //    // false because the player is not an enemy
+            //    combat.Attack(false);
+            //    anim.SetTrigger("punch");
+            //}
         }
     }
 
