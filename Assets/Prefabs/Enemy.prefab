@@ -282,7 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 0}
   targetPlayer: 0
-  speed: 1
+  speed: 1.5
   lookAtPlayer: 1
   useSide: 1
 --- !u!114 &114957751405001596
