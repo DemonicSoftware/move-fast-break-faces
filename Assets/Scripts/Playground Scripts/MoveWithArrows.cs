@@ -19,6 +19,11 @@ public class MoveWithArrows : Physics2DObject {
 	private float moveHorizontal;
 	private float moveVertical;
 
+    private bool attacking = false;
+    private float attackTimer = 0;
+    private float attackCd = 0.3f;
+
+
     Animator anim;
     // about attack
 
@@ -28,7 +33,8 @@ public class MoveWithArrows : Physics2DObject {
 
 
     // Update gets called every frame
-    void Update () {	
+    void Update ()
+    {	
 		// Moving with the arrow keys
 		if(typeOfControl == Enums.KeyGroups.ArrowKeys) {
 			moveHorizontal = Input.GetAxis("Horizontal");
@@ -53,24 +59,44 @@ public class MoveWithArrows : Physics2DObject {
 
         //rotate the gameObject towards the direction of movement
         //the axis to look can be decided with the "axis" variable
-        if (orientToDirection) {
+        if (orientToDirection)
+        {
 			if(movement.sqrMagnitude >= 0.01f)
 			{
 				cachedDirection = movement;
 			}
 			Utils.SetAxisTowards(lookAxis, transform, cachedDirection);
 		}
-	}
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            attacking = true;
+            attackTimer = attackCd;
+        }
+    }
 
 
 
 	// FixedUpdate is called every frame when the physics are calculated
-	void FixedUpdate () {
+	void FixedUpdate ()
+    {
         anim.SetFloat("speed", Mathf.Abs(moveVertical + moveHorizontal));
 
-        if (Input.GetMouseButtonDown(0)) {
-            anim.SetTrigger("punch");
+        
+
+        if(attacking)
+        {
+            if(attackTimer > 0)
+            {
+                attackTimer -= Time.deltaTime;
+            }
+            else
+            {
+                attacking = false;
+            }
         }
+        anim.SetBool("swing", attacking);
+
         // Apply the force to the Rigidbody2d
         rigidbody2D.AddForce(movement * speed * 10f);
 
