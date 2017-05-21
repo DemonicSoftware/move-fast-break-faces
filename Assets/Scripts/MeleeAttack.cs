@@ -40,6 +40,7 @@ public class MeleeAttack : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D otherCollider){
-
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 }

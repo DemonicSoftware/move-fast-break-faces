@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
             {
                 // false because the player is not an enemy
                 combat.Attack(false);
-                anim.SetTrigger("punch");
+                anim.SetTrigger("swing");
             }
         }
     }

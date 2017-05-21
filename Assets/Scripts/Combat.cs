@@ -5,13 +5,12 @@ using UnityEngine;
 public class Combat : MonoBehaviour {
 
 	public Transform range;
-    public Transform melee;
+    //public Transform melee;
     public GameObject meleeAttackTrigger;
     public float shootingRate = 0.25f;
     private float shootCooldown = 0;
     public bool CanAttack =true;
     public Vector2 direction = new Vector2(1, 0);
-    public Collider2D meleeTrigger;
     public bool gun = true;
     public double gunAmmo = 100;
     public bool hand = true;
@@ -80,8 +79,8 @@ public class Combat : MonoBehaviour {
 
                 // The is enemy property
                 // if (handAttack != null) {
-                //     handAttack.isEnemy = isEnemy;
-                // }
+                  //   handAttack.isEnemy = isEnemy;
+                 //}
             }
             //else if(currentWeapon == "sword"&& sword == true) {
 
