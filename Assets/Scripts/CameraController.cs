@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-  public GameObject player;
-  private Vector3 offset;
+  	public Transform target;
+	public float cam_speed;
+	Camera mycam;
 
 	// Use this for initialization
 	void Start () {
-        offset = transform.position - player.transform.position;
+
+		mycam = GetComponent<Camera> ();
+
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        transform.position = player.transform.position + offset;
+	void FixedUpdate () {
+
+		mycam.orthographicSize = (Screen.height / 100f) / 0.6f;
+
+		if (target) 
+		{
+			transform.position = Vector3.Lerp (transform.position, target.position, cam_speed) + new Vector3(0, 0, -10);
+		}
+
 	}
 }
