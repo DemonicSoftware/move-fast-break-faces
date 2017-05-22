@@ -100,6 +100,7 @@
     <Compile Include="Assets\Scripts\Playground Scripts\Utilities\Enums.cs" />
     <Compile Include="Assets\Scripts\Playground Scripts\Utilities\Utils.cs" />
     <Compile Include="Assets\Scripts\RangeAttack.cs" />
+    <Compile Include="Assets\Scripts\RangedEnemyMovement.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
