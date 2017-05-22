@@ -33,7 +33,8 @@ public class PlayerController : MonoBehaviour {
         healthText.text = "Health: " + health.getHealth().ToString();
         scoreText.text = "Faces Broken: " + (1).ToString();
 
-        if (isDead()) {
+        if (isDead())
+        {
             GetComponent<SpriteRenderer>().enabled = false;
             endText.enabled = true;
             endScore.text = "Total Faces Broken: " + (1).ToString();

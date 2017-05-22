@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Health : MonoBehaviour {
+public class Health : MonoBehaviour
+{
     public int HP = 5;
     public bool isEnemy = true;
     public float damageCooldown = 1;
@@ -11,23 +12,42 @@ public class Health : MonoBehaviour {
 	private AudioSource[] zombieAudio;
     public Text scoreText;
 
-   // Use this for initialization
-    void Start () {
+    private Vector3 healthScale;
+    private SpriteRenderer healthBar;
+
+    // Use this for initialization
+    void Start ()
+    {
         anim = GetComponent<Animator>();
-	}
+        healthBar = GameObject.Find("HealthBar").GetComponent<SpriteRenderer>();
+
+        // Getting the intial scale of the healthbar (whilst the player has full health).
+        healthScale = healthBar.transform.localScale;
+    }
 	
 	// Update is called once per frame
-	void Update () {
-        if (damageCooldown > 0) {
+	void Update ()
+    {
+        if (damageCooldown > 0)
+        {
             damageCooldown -= Time.deltaTime;
         }
     }
 
-	public void Damage(int damageCount) {
+	public void Damage(int damageCount)
+    {
 		HP -= damageCount;
 
-		if (HP <= 0) {
-			if (isEnemy) {
+        if(!isEnemy)
+        {
+            // Update what the health bar looks like.
+            UpdateHealthBar();
+        }
+
+		if (HP <= 0)
+        {
+			if (isEnemy)
+            {
 				anim.SetBool("dead", true);
 				GetComponent<FollowPlayer>().enabled = false;
                 GetComponent<Collider2D>().enabled = false;
@@ -40,35 +60,43 @@ public class Health : MonoBehaviour {
 				StartCoroutine(DestroyObject());
 			}
 
-			if (!isEnemy) {
+			if (!isEnemy)
+            {
+
 				GetComponent<AudioSource>().Play();
 			}
 		}
 	}
 
-    public Health(int startingHealth) {
+    public Health(int startingHealth)
+    {
         HP = startingHealth;
         //baseHealth = startingHealth;
         //health = baseHealth;
     }
 
-    public void dealDamage(int damage) {
+    public void dealDamage(int damage)
+    {
         HP -= damage;
     }
 
-    void restoreHealth(int healing) {
+    void restoreHealth(int healing)
+    {
         HP += healing;
     }
 
-    public void refillHealth() {
+    public void refillHealth()
+    {
         HP += 1; //baseHealth;
     }
 
-    public int getHealth() {
+    public int getHealth()
+    {
         return HP;
     }
 
-    void OnTriggerEnter2D(Collider2D otherCollider) {
+    void OnTriggerEnter2D(Collider2D otherCollider)
+    {
        // Is this a shot?
         RangeAttack range = otherCollider.gameObject.GetComponent<RangeAttack>();
         MeleeAttack melee = otherCollider.gameObject.GetComponent<MeleeAttack>();
@@ -95,17 +123,29 @@ public class Health : MonoBehaviour {
         }
     }
 
-    IEnumerator DestroyObject() {
+    IEnumerator DestroyObject()
+    {
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D otherCollider) {
+    private void OnCollisionEnter2D(Collision2D otherCollider)
+    {
         if (!isEnemy) {
-            if (otherCollider.gameObject.tag == "Enemy" && damageCooldown <= 0) {
+            if (otherCollider.gameObject.tag == "Enemy" && damageCooldown <= 0)
+            {
                 damageCooldown = 1;
                 Damage(1);
             }
         }
+    }
+
+    public void UpdateHealthBar()
+    {
+        // Set the health bar's colour to proportion of the way between green and red based on the player's health.
+        healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - (HP * 20) * 0.01f);
+
+        // Set the scale of the health bar to be proportional to the player's health.
+        healthBar.transform.localScale = new Vector3(healthScale.x * (HP * 20) * 0.01f, healthScale.y, 1);
     }
 }
