@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Combat : MonoBehaviour {
 
-	public Transform range;
+	public Transform Shots;
     //public Transform melee;
     public GameObject meleeAttackTrigger;
     public float shootingRate = 0.25f;
@@ -52,7 +52,7 @@ public class Combat : MonoBehaviour {
                 shootCooldown = shootingRate;
                 CanAttack = false;
                 // Create a new shot
-                var shotTransform = Instantiate(range) as Transform;
+                var shotTransform = Instantiate(Shots) as Transform;
 
                 // Assign position
                 shotTransform.position = transform.position;
@@ -75,7 +75,7 @@ public class Combat : MonoBehaviour {
                 shootCooldown = shootingRate;
                 CanAttack = false;
                 meleeAttackTrigger.GetComponent<Collider2D>().enabled = true;
-                meleeAttackTrigger.GetComponent<SpriteRenderer>().enabled = true;
+                //meleeAttackTrigger.GetComponent<SpriteRenderer>().enabled = true;
 
                 // The is enemy property
                 // if (handAttack != null) {
@@ -101,11 +101,9 @@ public class Combat : MonoBehaviour {
 
     public void changeWeapon() {
 		if (currentWeapon == "hand") {
-			currentWeapon = "sword";
-		} else if (currentWeapon == "sword") {
 			currentWeapon = "gun";
-		} else if (currentWeapon == "gun") {
-			currentWeapon = "hand";
-		}
+		} else if (currentWeapon == "hand") {
+			currentWeapon = "gun";
+		} 
 	}
 }

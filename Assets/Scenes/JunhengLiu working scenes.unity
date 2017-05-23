@@ -1287,6 +1287,20 @@ Prefab:
       propertyPath: endScore
       value: 
       objectReference: {fileID: 446766547}
+    - target: {fileID: 1633556801118732, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114470275591850170, guid: b9f81fe5e01a5dd4cad0db35569bea34,
+        type: 2}
+      propertyPath: damagePanel
+      value: 
+      objectReference: {fileID: 1346663062}
+    - target: {fileID: 212377122279940190, guid: b9f81fe5e01a5dd4cad0db35569bea34,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}
   m_IsPrefabParent: 0
@@ -1575,6 +1589,53 @@ SpriteRenderer:
   m_Size: {x: 1.91, y: 1.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+--- !u!1001 &983027590
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4035501420985950, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035501420985950, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -6.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035501420985950, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035501420985950, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035501420985950, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035501420985950, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035501420985950, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035501420985950, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114571747631644916, guid: 02a481e55a8fa2840b38872f174946f8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1170243335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,6 +2182,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1346663062 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1887500854963766, guid: b9f81fe5e01a5dd4cad0db35569bea34,
+    type: 2}
+  m_PrefabInternal: {fileID: 632894989}
 --- !u!1 &1403801399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2377,31 @@ SpriteRenderer:
   m_Size: {x: 10.24, y: 0.69}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+--- !u!1 &1554585056 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1473299885285666, guid: 02a481e55a8fa2840b38872f174946f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 983027590}
+--- !u!114 &1554585057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1554585056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960ed6cd469320b4e9e06a215b28b434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody2D: {fileID: 0}
+  Shots: {fileID: 4392926878520968, guid: b7290653e141a9246b9ba03df08a30eb, type: 2}
+  shootingRate: 3
+  CanAttack: 1
+  direction: {x: 1, y: 0}
+  targetPlayer: 0
+  speed: 1
+  lookAtPlayer: 1
+  useSide: 0
 --- !u!1 &1604866578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,7 +2416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1604866579
 Transform:
   m_ObjectHideFlags: 0

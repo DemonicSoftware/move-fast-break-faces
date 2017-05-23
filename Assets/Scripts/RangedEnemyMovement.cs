@@ -6,6 +6,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class RangedEnemyMovement : Physics2DObject
 {
+    public Transform Shots;
+    public float shootingRate = 3;
+    private float shootCooldown = 0;
+    public bool CanAttack = true;
+    public Vector2 direction = new Vector2(1, 0);
+
     // This is the player the object is going to move towards
     public Enums.Players targetPlayer = Enums.Players.Player;
 
@@ -14,7 +20,7 @@ public class RangedEnemyMovement : Physics2DObject
     public float speed = 1f;
 
     // Used to decide if the object will look at the player while pursuing him
-    public bool lookAtPlayer = false;
+    public bool lookAtPlayer = true;
 
     // The direction that will face the player
     public Enums.Directions useSide = Enums.Directions.Up;
@@ -27,6 +33,25 @@ public class RangedEnemyMovement : Physics2DObject
         playerTransform = GameObject.FindGameObjectWithTag(targetPlayer.ToString()).transform;
     }
 
+    private void Update()
+    {
+        if (CanAttack == false)
+        {
+            if (shootCooldown > 0)
+            {
+                shootCooldown -= Time.deltaTime;
+            }
+            if (shootCooldown <= 0f)
+            {
+                CanAttack = true;
+            }
+            else
+            {
+                CanAttack = false;
+            }
+        }
+
+    }
     // FixedUpdate is called once per frame
     void FixedUpdate()
     {
@@ -42,7 +67,33 @@ public class RangedEnemyMovement : Physics2DObject
             {
                 Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
             }
-        }   
-       
+        }
+
+        Attack(true);
+    }
+
+    public void Attack(bool isEnemy)
+    {
+        if (CanAttack)
+        {
+                shootCooldown = shootingRate;
+                CanAttack = false;
+                // Create a new shot
+                var shotTransform = Instantiate(Shots) as Transform;
+
+                // Assign position
+                shotTransform.position = transform.position;
+
+                RangeAttack shot = shotTransform.gameObject.GetComponent<RangeAttack>();
+            shot.speed = 1;
+            shot.direction = playerTransform.position - transform.position;//this.direction;
+
+                // The is enemy property
+                if (shot != null)
+                {
+                    shot.isEnemy = isEnemy;
+                }
+            
+        }
     }
 }
