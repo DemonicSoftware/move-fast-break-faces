@@ -9,8 +9,8 @@ public class Health : MonoBehaviour
     public bool isEnemy = true;
     public float damageCooldown = 1;
     private Animator anim;
+    public GameObject damagePanel;
 	private AudioSource[] zombieAudio;
-    public Text scoreText;
 
     private Vector3 healthScale;
     private SpriteRenderer healthBar;
@@ -40,6 +40,7 @@ public class Health : MonoBehaviour
 
         if(!isEnemy)
         {
+            StartCoroutine(showDamaged());
             // Update what the health bar looks like.
             UpdateHealthBar();
         }
@@ -62,7 +63,7 @@ public class Health : MonoBehaviour
 
 			if (!isEnemy)
             {
-
+                GameController.gameControllerInstance.PlayerDied();
 				GetComponent<AudioSource>().Play();
 			}
 		}
@@ -147,5 +148,12 @@ public class Health : MonoBehaviour
 
         // Set the scale of the health bar to be proportional to the player's health.
         healthBar.transform.localScale = new Vector3(healthScale.x * (HP * 20) * 0.01f, healthScale.y, 1);
+    }
+
+    private IEnumerator showDamaged()
+    {
+        damagePanel.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        damagePanel.SetActive(false);
     }
 }

@@ -5,17 +5,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 	private Health health;
-	public Text healthText;
-    public Text scoreText;
-    public Text endText;
-    public Text endScore;
     private Combat combat;
     private Animator anim;
     void Start () {
-        endText.enabled = false;
-        endScore.enabled = false;
         health = GetComponent<Health>();
-        healthText.text = health.getHealth().ToString();
         combat = GetComponent<Combat>();
 
         anim = GetComponent<Animator>();
@@ -30,15 +23,11 @@ public class PlayerController : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        healthText.text = "Health: " + health.getHealth().ToString();
-        scoreText.text = "Faces Broken: " + (1).ToString();
 
-        if (isDead())
+        if (IsDead())
         {
             GetComponent<SpriteRenderer>().enabled = false;
-            endText.enabled = true;
-            endScore.text = "Total Faces Broken: " + (1).ToString();
-            endScore.enabled = true;
+            GameController.gameControllerInstance.PlayerDied();
         }
 
         //about attack
@@ -60,7 +49,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    bool isDead() {
+    bool IsDead() {
         return health.getHealth() <= 0;
     }
 }
