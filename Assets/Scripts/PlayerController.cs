@@ -52,4 +52,13 @@ public class PlayerController : MonoBehaviour {
     bool IsDead() {
         return health.getHealth() <= 0;
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Ammo")
+        {
+            combat.gunAmmo += 10;
+            Destroy(other.gameObject);
+        }
+    }
 }

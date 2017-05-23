@@ -7,7 +7,8 @@ using UnityEngine;
 public class RangedEnemyMovement : Physics2DObject
 {
     public Transform Shots;
-    public float shootingRate = 3;
+    public float shootingRate = 1;
+    public float shotSpeed = 1;
     private float shootCooldown = 0;
     public bool CanAttack = true;
     public Vector2 direction = new Vector2(1, 0);
