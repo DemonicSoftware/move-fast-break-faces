@@ -18,7 +18,11 @@ public class PlayerController : MonoBehaviour {
         // weapon direction calculation, face to mouse cursor 
         Vector3 pointInSpace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 directionToLookAt = (pointInSpace - transform.position).normalized;
-        combat.direction = directionToLookAt; 
+        combat.direction = directionToLookAt;
+        if (Input.GetButtonDown("changeWeapon"))
+        {
+            combat.changeWeapon();
+        }
 
     }
 
@@ -31,18 +35,29 @@ public class PlayerController : MonoBehaviour {
         }
 
         //about attack
-        if (Input.GetButtonDown("changeWeapon"))
-        {
-            combat.changeWeapon();
-        }
-        bool fire = Input.GetButtonDown("Fire1");
+        bool fire1 = Input.GetButtonDown("Fire1");
 
         //if (Input.GetKey(KeyCode.F))
-        if (fire)
+        if (fire1)
         {
             if (combat != null)
             {
                 // false because the player is not an enemy
+                combat.currentWeapon = "hand";
+                combat.Attack(false);
+                anim.SetTrigger("swing");
+            }
+        }
+
+        bool fire2 = Input.GetButtonDown("Fire2");
+
+        //if (Input.GetKey(KeyCode.F))
+        if (fire2)
+        {
+            if (combat != null)
+            {
+                // false because the player is not an enemy
+                combat.currentWeapon = "gun";
                 combat.Attack(false);
                 anim.SetTrigger("swing");
             }
@@ -55,7 +70,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Ammo")
+        if (other.tag == "Hammer")
         {
             combat.gunAmmo += 10;
             Destroy(other.gameObject);

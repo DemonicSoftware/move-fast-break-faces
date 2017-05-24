@@ -102,8 +102,8 @@ public class Combat : MonoBehaviour {
     public void changeWeapon() {
 		if (currentWeapon == "hand") {
 			currentWeapon = "gun";
-		} else if (currentWeapon == "hand") {
-			currentWeapon = "gun";
+		} else if (currentWeapon == "gun") {
+			currentWeapon = "hand";
 		} 
 	}
 }
