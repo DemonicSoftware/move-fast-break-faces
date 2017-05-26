@@ -49,14 +49,21 @@ public class Health : MonoBehaviour
         {
 			if (isEnemy)
             {
-				anim.SetBool("dead", true);
-				GetComponent<FollowPlayer>().enabled = false;
-                GetComponent<Collider2D>().enabled = false;
+                if(GetComponent<Animator>() != null)
+				    anim.SetBool("dead", true);
+                if (GetComponent<FollowPlayer>() != null)
+                    GetComponent<FollowPlayer>().enabled = false;
+                if (GetComponent<Collider2D>() != null)
+                    GetComponent<Collider2D>().enabled = false;
+                if(GetComponent<RangedEnemyMovement>() != null)
+                    GetComponent<RangedEnemyMovement>().enabled = false;
 
 				zombieAudio = GetComponents<AudioSource>();
-				zombieAudio[0].enabled = false;
-				zombieAudio[1].Play();
-
+                if (GetComponents<AudioSource>() != null)
+                {
+                    zombieAudio[0].enabled = false;
+                    zombieAudio[1].Play();
+                }
 				// To give the animation some time to run
 				StartCoroutine(DestroyObject());
 			}
@@ -117,9 +124,7 @@ public class Health : MonoBehaviour
           if (melee.isEnemy != isEnemy) {
                 Damage(melee.damage);
       
-                // Destroy the shot
                 //Destroy(melee.gameObject); 
-                // Remember to always target the game object, otherwise you will just remove the script
            }
         }
     }

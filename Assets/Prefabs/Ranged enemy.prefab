@@ -21,10 +21,12 @@ GameObject:
   - component: {fileID: 4686348025298820}
   - component: {fileID: 212589837692951780}
   - component: {fileID: 50024451784550428}
+  - component: {fileID: 61078351073483942}
   - component: {fileID: 114988504171477866}
+  - component: {fileID: 114692804383421882}
   m_Layer: 0
   m_Name: Ranged enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099872386055550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.76, y: -17.53, z: 0}
+  m_LocalPosition: {x: 27.32, y: -17.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,6 +64,46 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61078351073483942
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1099872386055550}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.25, y: 1.25}
+    newSize: {x: 1.25, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.25, y: 1.25}
+  m_EdgeRadius: 0
+--- !u!114 &114692804383421882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1099872386055550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a658bef92a325f8489374739ae032b13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 1
+  isEnemy: 1
+  damageCooldown: 0
+  damagePanel: {fileID: 0}
 --- !u!114 &114988504171477866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,6 +116,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 0}
+  Shots: {fileID: 4392926878520968, guid: b7290653e141a9246b9ba03df08a30eb, type: 2}
+  shootingRate: 1
+  shotSpeed: 1
+  CanAttack: 1
+  direction: {x: 1, y: 0}
   targetPlayer: 0
   speed: 1
   lookAtPlayer: 1
@@ -107,8 +154,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 260355325
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e773b51102e257e40a1e0ee6a6dcea26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
