@@ -12,6 +12,7 @@ public class RangedEnemyMovement : Physics2DObject
     private float shootCooldown = 0;
     public bool CanAttack = true;
     public Vector2 direction = new Vector2(1, 0);
+    public Animator anim;
 
     // This is the player the object is going to move towards
     public Enums.Players targetPlayer = Enums.Players.Player;
@@ -32,6 +33,7 @@ public class RangedEnemyMovement : Physics2DObject
     {
         // Find the player in the scene and store a reference for later use
         playerTransform = GameObject.FindGameObjectWithTag(targetPlayer.ToString()).transform;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -49,6 +51,7 @@ public class RangedEnemyMovement : Physics2DObject
             else
             {
                 CanAttack = false;
+                
             }
         }
 
@@ -70,31 +73,39 @@ public class RangedEnemyMovement : Physics2DObject
             }
         }
 
-        Attack(true);
+        Attack();
     }
 
-    public void Attack(bool isEnemy)
+    public void Attack()
     {
         if (CanAttack)
         {
-                shootCooldown = shootingRate;
-                CanAttack = false;
-                // Create a new shot
-                var shotTransform = Instantiate(Shots) as Transform;
+            anim.SetBool("attacking", true);  
+        }
+    }
 
-                // Assign position
-                shotTransform.position = transform.position;
+    public void shoot()
+    {
+        anim.SetBool("attacking", false);
+        shootCooldown = shootingRate;
+        CanAttack = false;
+        // Create a new shot
+        var shotTransform = Instantiate(Shots) as Transform;
 
-                RangeAttack shot = shotTransform.gameObject.GetComponent<RangeAttack>();
-            shot.speed = 1;
-            shot.direction = playerTransform.position - transform.position;//this.direction;
+        // Assign position
+        shotTransform.position = this.gameObject.transform.GetChild(5).position;
+        //Vector3 positionAdjustment = new Vector3(0.2f, 0.505f, 0);
 
-                // The is enemy property
-                if (shot != null)
-                {
-                    shot.isEnemy = isEnemy;
-                }
-            
+        //shotTransform.position += positionAdjustment;
+
+        RangeAttack shot = shotTransform.gameObject.GetComponent<RangeAttack>();
+        shot.speed = 1;
+        shot.direction = playerTransform.position - transform.position;//this.direction;
+
+        // The is enemy property
+        if (shot != null)
+        {
+            shot.isEnemy = true;
         }
     }
 }
