@@ -3176,7 +3176,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5079,7 +5079,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10081,6 +10081,11 @@ Prefab:
         type: 2}
       propertyPath: m_EdgeRadius
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114470275591850170, guid: b9f81fe5e01a5dd4cad0db35569bea34,
+        type: 2}
+      propertyPath: damageCooldown
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114683400768322222, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}

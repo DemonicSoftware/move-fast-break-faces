@@ -75,6 +75,10 @@ public class Health : MonoBehaviour
 
 			if (!isEnemy)
             {
+				anim.SetBool ("dead", true);
+				GetComponent<LookAtCursor>().enabled = false;
+				GetComponent<MoveWithArrows>().enabled = false;
+				GetComponent<BoxCollider2D> ().enabled = false;
                 GameController.gameControllerInstance.PlayerDied();
                 if(GetComponent<AudioSource>() != null)
 				GetComponent<AudioSource>().Play();
