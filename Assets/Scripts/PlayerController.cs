@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Hammer")
+        if (other.tag == "Ammo")
         {
             combat.gunAmmo += 10;
             Destroy(other.gameObject);
