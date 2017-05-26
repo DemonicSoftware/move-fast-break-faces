@@ -3162,7 +3162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ae9f8a9a9d8f04689e3273e0234b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 1303154991411114, guid: 138c08d2ac6722d438da22e86ca08abb,
+  prefabToSpawn: {fileID: 1473299885285666, guid: 02a481e55a8fa2840b38872f174946f8,
     type: 2}
   spawnNumberID: 2
   spawnInterval: 10
@@ -5065,7 +5065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ae9f8a9a9d8f04689e3273e0234b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 1303154991411114, guid: 138c08d2ac6722d438da22e86ca08abb,
+  prefabToSpawn: {fileID: 1473299885285666, guid: 02a481e55a8fa2840b38872f174946f8,
     type: 2}
   spawnNumberID: 1
   spawnInterval: 10
