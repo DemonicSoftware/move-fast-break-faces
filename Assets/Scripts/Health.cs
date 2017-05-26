@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     public int HP = 5;
     public bool isEnemy = true;
     public float damageCooldown = 1;
+	private float damgeCooldownCount;
     private Animator anim;
     public GameObject damagePanel;
 	private AudioSource[] zombieAudio;
@@ -28,9 +29,9 @@ public class Health : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (damageCooldown > 0)
+		if (damgeCooldownCount > 0)
         {
-            damageCooldown -= Time.deltaTime;
+			damgeCooldownCount -= Time.deltaTime;
         }
     }
 
@@ -49,6 +50,9 @@ public class Health : MonoBehaviour
         {
 			if (isEnemy)
             {
+				// To give the animation some time to run
+				Destroy (gameObject, 2f);
+
                 if(GetComponent<Animator>() != null)
 				    anim.SetBool("dead", true);
                 if (GetComponent<FollowPlayer>() != null)
@@ -64,8 +68,9 @@ public class Health : MonoBehaviour
                     zombieAudio[0].enabled = false;
                     zombieAudio[1].Play();
                 }
-				// To give the animation some time to run
-				StartCoroutine(DestroyObject());
+
+				//StartCoroutine(DestroyObject());
+
 			}
 
 			if (!isEnemy)
@@ -130,22 +135,31 @@ public class Health : MonoBehaviour
         }
     }
 
-    IEnumerator DestroyObject()
-    {
-        yield return new WaitForSeconds(2);
-        Destroy(gameObject);
-    }
-
     private void OnCollisionEnter2D(Collision2D otherCollider)
     {
-        if (!isEnemy) {
-            if (otherCollider.gameObject.tag == "Enemy" && damageCooldown <= 0)
+		if (isEnemy) 
+		{
+			//if (damgeCooldownCount <= 0) 
+			//{
+				anim.SetBool ("attacking", true);
+				//damgeCooldownCount = 2;
+			//}
+
+		}
+        if (!isEnemy) 
+		{
+			if (otherCollider.gameObject.tag == "Enemy" && damgeCooldownCount <= 0)
             {
-                damageCooldown = 1;
+				damgeCooldownCount = damageCooldown;
                 Damage(1);
             }
         }
+
     }
+	public void finishedAttacking()
+	{
+		anim.SetBool ("attacking", false);
+	}
 
     public void UpdateHealthBar()
     {
