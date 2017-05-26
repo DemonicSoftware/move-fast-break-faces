@@ -26,42 +26,48 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
 
         if (IsDead())
         {
-            GetComponent<SpriteRenderer>().enabled = false;
+            if (GetComponent<SpriteRenderer>() != null)
+                GetComponent<SpriteRenderer>().enabled = false;
             GameController.gameControllerInstance.PlayerDied();
         }
 
-        //about attack
-        bool fire1 = Input.GetButtonDown("Fire1");
-
-        //if (Input.GetKey(KeyCode.F))
-        if (fire1)
+        if (!IsDead())
         {
-            if (combat != null)
+            //about attack
+            bool fire1 = Input.GetButtonDown("Fire1");
+
+            //if (Input.GetKey(KeyCode.F))
+            if (fire1)
             {
-                // false because the player is not an enemy
-                combat.currentWeapon = "hand";
-                combat.Attack(false);
-                anim.SetTrigger("swing");
+                if (combat != null)
+                {
+                    // false because the player is not an enemy
+                    combat.currentWeapon = "hand";
+                    combat.Attack(false);
+                    anim.SetTrigger("swing");
+                }
+            }
+
+            bool fire2 = Input.GetButtonDown("Fire2");
+
+            //if (Input.GetKey(KeyCode.F))
+            if (fire2)
+            {
+                if (combat != null)
+                {
+                    // false because the player is not an enemy
+                    combat.currentWeapon = "gun";
+                    combat.Attack(false);
+                    anim.SetTrigger("swing");
+                }
             }
         }
 
-        bool fire2 = Input.GetButtonDown("Fire2");
-
-        //if (Input.GetKey(KeyCode.F))
-        if (fire2)
-        {
-            if (combat != null)
-            {
-                // false because the player is not an enemy
-                combat.currentWeapon = "gun";
-                combat.Attack(false);
-                anim.SetTrigger("swing");
-            }
-        }
     }
 
     bool IsDead() {

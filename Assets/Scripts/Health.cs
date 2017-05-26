@@ -71,6 +71,7 @@ public class Health : MonoBehaviour
 			if (!isEnemy)
             {
                 GameController.gameControllerInstance.PlayerDied();
+                if(GetComponent<AudioSource>() != null)
 				GetComponent<AudioSource>().Play();
 			}
 		}
