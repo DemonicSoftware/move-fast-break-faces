@@ -27,6 +27,9 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void Update () {
+		if (Input.GetKey(KeyCode.Q)) {
+            Application.LoadLevel("Main Menu");
+        }
         if (gameLost && Input.GetKey(KeyCode.R)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
