@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4821249833382700}
   - component: {fileID: 212743320602868680}
-  - component: {fileID: 95502209797969684}
   - component: {fileID: 50924889359441654}
   - component: {fileID: 58921813747564500}
+  - component: {fileID: 95295231708576688}
   m_Layer: 0
   m_Name: HammerPickup
   m_TagString: Ammo
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436400011697482}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.26432, y: -21.306786, z: 0}
+  m_LocalPosition: {x: 0.03, y: -0.87, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.105
---- !u!95 &95502209797969684
+--- !u!95 &95295231708576688
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -87,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 1436400011697482}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2d73ac4ca1229214593876fd47715d02, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5ce0c4d8eaf874680bc48e4862acb2ad, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

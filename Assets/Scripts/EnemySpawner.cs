@@ -22,8 +22,10 @@ public class EnemySpawner : MonoBehaviour {
 
 	private BoxCollider2D boxCollider2D;
 
-	void Start () {
-        switch(spawnNumberID) {
+	void Start () 
+	{
+        switch(spawnNumberID) 
+		{
             case 1:
                 initalWait = waitOffset * 0;
                 break;

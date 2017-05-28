@@ -6,6 +6,8 @@ public class FollowPlayer : Physics2DObject
 {
 	// This is the player the object is going to move towards
 	public Enums.Players targetPlayer = Enums.Players.Player;
+	public bool followFromAnyDistance;
+	public double distanceToFollow = 10;
 
 	[Header("Movement")]
 	// Speed used to move towards the player
@@ -25,13 +27,33 @@ public class FollowPlayer : Physics2DObject
 	}
 	
 	// FixedUpdate is called once per frame
-	void FixedUpdate () {
-		//Move towards the player
-		rigidbody2D.MovePosition(Vector2.Lerp(transform.position, playerTransform.position, Time.fixedDeltaTime * speed));
+	void FixedUpdate () 
+	{
+		if (followFromAnyDistance) 
+		{
+			//Move towards the player
+			rigidbody2D.MovePosition (Vector2.Lerp (transform.position, playerTransform.position, Time.fixedDeltaTime * speed));
 
-		//look towards the player
-		if(lookAtPlayer) {
-			Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
+			//look towards the player
+			if (lookAtPlayer) 
+			{
+				Utils.SetAxisTowards (useSide, transform, playerTransform.position - transform.position);
+			}
 		}
+		else 
+		{
+			if (Vector3.Distance (playerTransform.position, transform.position) < distanceToFollow) 
+			{
+				//Move towards the player
+				rigidbody2D.MovePosition (Vector2.Lerp (transform.position, playerTransform.position, Time.fixedDeltaTime * speed));
+
+				//look towards the player
+				if (lookAtPlayer) 
+				{
+					Utils.SetAxisTowards (useSide, transform, playerTransform.position - transform.position);
+				}
+			}
+		}
+
 	}
 }

@@ -12,7 +12,9 @@ public class RangedEnemyMovement : Physics2DObject
     private float shootCooldown = 0;
     public bool CanAttack = true;
     public Vector2 direction = new Vector2(1, 0);
-    public Animator anim;
+	private Animator anim;
+	public bool followFromAnyDistance;
+	public double distanceToFollow = 10;
 
     // This is the player the object is going to move towards
     public Enums.Players targetPlayer = Enums.Players.Player;
@@ -59,21 +61,42 @@ public class RangedEnemyMovement : Physics2DObject
     // FixedUpdate is called once per frame
     void FixedUpdate()
     {
-
+		if (followFromAnyDistance) 
+		{
+			if(Vector2.Distance(transform.position, playerTransform.position) > Random.Range(12, 14))
+			{
+				//Move towards the player
+				rigidbody2D.MovePosition(Vector2.Lerp(transform.position, playerTransform.position, Time.fixedDeltaTime * speed));
+				//look towards the player
+				if (lookAtPlayer)
+				{
+					Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
+				}
+			}
+			Attack();
+		}
+		else 
+		{
+			if (Vector3.Distance (playerTransform.position, transform.position) < distanceToFollow) 
+			{
+				if(Vector2.Distance(transform.position, playerTransform.position) > Random.Range(12, 14))
+				{
+					//Move towards the player
+					rigidbody2D.MovePosition(Vector2.Lerp(transform.position, playerTransform.position, Time.fixedDeltaTime * speed));
+					//look towards the player
+					if (lookAtPlayer)
+					{
+						Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
+					}
+				}
+				Attack();
+			}
+		}
         //print(Vector2.Distance(transform.position, playerTransform.position));
 
-        if(Vector2.Distance(transform.position, playerTransform.position) > Random.Range(12, 14))
-        {
-            //Move towards the player
-            rigidbody2D.MovePosition(Vector2.Lerp(transform.position, playerTransform.position, Time.fixedDeltaTime * speed));
-            //look towards the player
-            if (lookAtPlayer)
-            {
-                Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
-            }
-        }
+        
 
-        Attack();
+        
     }
 
     public void Attack()

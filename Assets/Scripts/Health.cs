@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     private Animator anim;
     public GameObject damagePanel;
 	private AudioSource[] zombieAudio;
+	private bool dead = false;
 
     private Vector3 healthScale;
     private SpriteRenderer healthBar;
@@ -33,6 +34,10 @@ public class Health : MonoBehaviour
         {
 			damgeCooldownCount -= Time.deltaTime;
         }
+		if (dead) 
+		{
+			transform.rotation = Quaternion.identity;
+		}
     }
 
 	public void Damage(int damageCount)
@@ -53,6 +58,7 @@ public class Health : MonoBehaviour
 				// To give the animation some time to run
 				Destroy (gameObject, 2f);
 
+				dead = true;
                 if(GetComponent<Animator>() != null)
 				    anim.SetBool("dead", true);
                 if (GetComponent<FollowPlayer>() != null)
@@ -61,6 +67,7 @@ public class Health : MonoBehaviour
                     GetComponent<Collider2D>().enabled = false;
                 if(GetComponent<RangedEnemyMovement>() != null)
                     GetComponent<RangedEnemyMovement>().enabled = false;
+				
 
 //				zombieAudio = GetComponents<AudioSource>();
 //                if (GetComponents<AudioSource>() != null)
@@ -74,6 +81,7 @@ public class Health : MonoBehaviour
 
 			if (!isEnemy)
             {
+				dead = true;
 				anim.SetBool ("dead", true);
 				GetComponent<LookAtCursor>().enabled = false;
 				GetComponent<MoveWithArrows>().enabled = false;

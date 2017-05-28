@@ -7247,6 +7247,11 @@ Prefab:
       propertyPath: m_Name
       value: StandardEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114571747631644916, guid: 02a481e55a8fa2840b38872f174946f8,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
   m_IsPrefabParent: 0
@@ -9828,6 +9833,11 @@ Prefab:
     - target: {fileID: 1473299885285666, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
       propertyPath: m_Name
       value: StandardEnemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114571747631644916, guid: 02a481e55a8fa2840b38872f174946f8,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
@@ -16714,6 +16724,11 @@ Prefab:
     - target: {fileID: 1473299885285666, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
       propertyPath: m_Name
       value: StandardEnemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114571747631644916, guid: 02a481e55a8fa2840b38872f174946f8,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
@@ -24226,6 +24241,11 @@ Prefab:
       propertyPath: m_Name
       value: StandardEnemy (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 114571747631644916, guid: 02a481e55a8fa2840b38872f174946f8,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
   m_IsPrefabParent: 0
@@ -29662,6 +29682,11 @@ Prefab:
     - target: {fileID: 1473299885285666, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
       propertyPath: m_Name
       value: StandardEnemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114571747631644916, guid: 02a481e55a8fa2840b38872f174946f8,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
@@ -42201,6 +42226,11 @@ Prefab:
     - target: {fileID: 4035501420985950, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114571747631644916, guid: 02a481e55a8fa2840b38872f174946f8,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02a481e55a8fa2840b38872f174946f8, type: 2}
