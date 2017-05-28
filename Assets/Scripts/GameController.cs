@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (Input.GetKey(KeyCode.Q)) {
+		if (Input.GetKey(KeyCode.Escape)) {
             Application.LoadLevel("Main Menu");
         }
         if (gameLost && Input.GetKey(KeyCode.R)) {

@@ -53,8 +53,6 @@ public class Health : MonoBehaviour
 				// To give the animation some time to run
 				Destroy (gameObject, 2f);
 
-                GameController.gameControllerInstance.EnemyKilled();
-
                 if(GetComponent<Animator>() != null)
 				    anim.SetBool("dead", true);
                 if (GetComponent<FollowPlayer>() != null)
@@ -64,13 +62,14 @@ public class Health : MonoBehaviour
                 if(GetComponent<RangedEnemyMovement>() != null)
                     GetComponent<RangedEnemyMovement>().enabled = false;
 
-				zombieAudio = GetComponents<AudioSource>();
-                if (GetComponents<AudioSource>() != null)
-                {
-                    zombieAudio[0].enabled = false;
-                    zombieAudio[1].Play();
-                }
-				//StartCoroutine(DestroyObject());
+//				zombieAudio = GetComponents<AudioSource>();
+//                if (GetComponents<AudioSource>() != null)
+//                {
+//                    zombieAudio[0].enabled = false;
+//                    zombieAudio[1].Play();
+//                }
+;
+				GameController.gameControllerInstance.EnemyKilled();
 			}
 
 			if (!isEnemy)
@@ -142,13 +141,8 @@ public class Health : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D otherCollider)
     {
 		if (isEnemy) 
-		{
-			//if (damgeCooldownCount <= 0) 
-			//{
+		{			
 				anim.SetBool ("attacking", true);
-				//damgeCooldownCount = 2;
-			//}
-
 		}
         if (!isEnemy) 
 		{

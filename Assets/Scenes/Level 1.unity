@@ -8280,52 +8280,6 @@ Transform:
   m_Father: {fileID: 1702694172}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1387899342
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1387899344}
-  - component: {fileID: 1387899343}
-  m_Layer: 0
-  m_Name: GameContoller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1387899343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1387899342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57d4f8ba8677439c8de9aa086ad1c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1987310152}
-  gameOverText: {fileID: 981733147}
-  gameWonText: {fileID: 2130013135}
-  enemyCountText: {fileID: 1569745853}
-  ammoCountText: {fileID: 1128587803}
-  enemyCount: 2
---- !u!4 &1387899344
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1387899342}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.78335, y: -10.65, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415179020
 GameObject:
   m_ObjectHideFlags: 0
@@ -12438,6 +12392,73 @@ Transform:
   m_Father: {fileID: 1702694172}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2044605018
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4284170879331532, guid: b5cf69683137741db97c98d4b732be20, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 59.78335
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284170879331532, guid: b5cf69683137741db97c98d4b732be20, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -10.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284170879331532, guid: b5cf69683137741db97c98d4b732be20, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284170879331532, guid: b5cf69683137741db97c98d4b732be20, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284170879331532, guid: b5cf69683137741db97c98d4b732be20, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284170879331532, guid: b5cf69683137741db97c98d4b732be20, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284170879331532, guid: b5cf69683137741db97c98d4b732be20, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284170879331532, guid: b5cf69683137741db97c98d4b732be20, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114532310717578202, guid: b5cf69683137741db97c98d4b732be20,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1987310152}
+    - target: {fileID: 114532310717578202, guid: b5cf69683137741db97c98d4b732be20,
+        type: 2}
+      propertyPath: gameOverText
+      value: 
+      objectReference: {fileID: 981733147}
+    - target: {fileID: 114532310717578202, guid: b5cf69683137741db97c98d4b732be20,
+        type: 2}
+      propertyPath: gameWonText
+      value: 
+      objectReference: {fileID: 2130013135}
+    - target: {fileID: 114532310717578202, guid: b5cf69683137741db97c98d4b732be20,
+        type: 2}
+      propertyPath: enemyCountText
+      value: 
+      objectReference: {fileID: 1569745853}
+    - target: {fileID: 114532310717578202, guid: b5cf69683137741db97c98d4b732be20,
+        type: 2}
+      propertyPath: ammoCountText
+      value: 
+      objectReference: {fileID: 1128587803}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b5cf69683137741db97c98d4b732be20, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2049717270
 GameObject:
   m_ObjectHideFlags: 0
