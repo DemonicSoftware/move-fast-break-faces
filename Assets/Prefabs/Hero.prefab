@@ -397,13 +397,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206c72431d84e46409df0abd66571e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shots: {fileID: 0}
+  Shots: {fileID: 4258954285876444, guid: 639b4e68d7ea858419dba7b913eabda7, type: 2}
   meleeAttackTrigger: {fileID: 1633556801118732}
   shootingRate: 0.25
   CanAttack: 1
   direction: {x: 1, y: 0}
   gun: 1
-  gunAmmo: 100
+  gunAmmo: 0
   hand: 1
   sword: 0
   currentWeapon: hand

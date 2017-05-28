@@ -11,8 +11,8 @@ public class Combat : MonoBehaviour {
     private float shootCooldown = 0;
     public bool CanAttack =true;
     public Vector2 direction = new Vector2(1, 0);
-    public bool gun = true;
-    public double gunAmmo = 100;
+    public bool gun = false;
+    public double gunAmmo = 0;
     public bool hand = true;
     public bool sword = false;
     public string currentWeapon = "hand";
@@ -47,29 +47,35 @@ public class Combat : MonoBehaviour {
 
     public void Attack(bool isEnemy) {
         if (CanAttack) {
-            if (currentWeapon == "gun"&& gun==true) {
-				
-                shootCooldown = shootingRate;
-                CanAttack = false;
-                // Create a new shot
-                var shotTransform = Instantiate(Shots) as Transform;
+            if (currentWeapon == "gun") {
 
-                // Assign position
-                shotTransform.position = transform.position;
+				if (gunAmmo <= 0) {
+					gun = false;
+				} else {
+					gun = true;
+				}
 
-                RangeAttack shot = shotTransform.gameObject.GetComponent<RangeAttack>();
-                shot.direction = this.direction;
+				if (gun == true) {
+					shootCooldown = shootingRate;
+					CanAttack = false;
+					// Create a new shot
+					var shotTransform = Instantiate (Shots) as Transform;
 
-                // The is enemy property
-                if (shot != null) {
-                    shot.isEnemy = isEnemy;
-                }
+					// Assign position
+					shotTransform.position = transform.position;
 
-                gunAmmo -= 1;
+					RangeAttack shot = shotTransform.gameObject.GetComponent<RangeAttack> ();
+					shot.direction = this.direction;
 
-                if (gunAmmo <= 0) {
-                    gun = false;
-                }
+					// The is enemy property
+					if (shot != null) {
+						shot.isEnemy = isEnemy;
+					}
+
+					gunAmmo -= 1;
+
+				}
+
             }
             else if (currentWeapon == "hand") {
                 shootCooldown = shootingRate;
