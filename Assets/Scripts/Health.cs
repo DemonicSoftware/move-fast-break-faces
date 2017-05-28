@@ -53,6 +53,8 @@ public class Health : MonoBehaviour
 				// To give the animation some time to run
 				Destroy (gameObject, 2f);
 
+                GameController.gameControllerInstance.EnemyKilled();
+
                 if(GetComponent<Animator>() != null)
 				    anim.SetBool("dead", true);
                 if (GetComponent<FollowPlayer>() != null)
@@ -68,9 +70,7 @@ public class Health : MonoBehaviour
                     zombieAudio[0].enabled = false;
                     zombieAudio[1].Play();
                 }
-
 				//StartCoroutine(DestroyObject());
-
 			}
 
 			if (!isEnemy)

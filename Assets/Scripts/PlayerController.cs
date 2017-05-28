@@ -82,4 +82,8 @@ public class PlayerController : MonoBehaviour {
             Destroy(other.gameObject);
         }
     }
+
+    public int GetAmmoCount() {
+        return combat.GetAmmo();
+    }
 }

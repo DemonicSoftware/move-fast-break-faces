@@ -106,4 +106,8 @@ public class Combat : MonoBehaviour {
 			currentWeapon = "hand";
 		} 
 	}
+
+    public int GetAmmo() {
+        return (int) gunAmmo;
+    }
 }
