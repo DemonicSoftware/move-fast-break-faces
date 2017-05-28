@@ -104,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 1473299885285666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.94, y: 14.88, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 4621051364941854}
   - {fileID: 4098060223179120}
@@ -208,7 +208,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.24}
+  m_Size: {x: 0.2, y: 0.22}
   m_EdgeRadius: 0
 --- !u!95 &95781174940610676
 Animator:
