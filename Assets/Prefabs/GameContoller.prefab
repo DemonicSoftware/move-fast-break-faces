@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57d4f8ba8677439c8de9aa086ad1c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1614454989968284, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}
+  player: {fileID: 0}
   gameOverText: {fileID: 0}
   gameWonText: {fileID: 0}
   enemyCountText: {fileID: 0}
