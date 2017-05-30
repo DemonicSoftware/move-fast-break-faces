@@ -240,7 +240,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -339,6 +339,7 @@ MonoBehaviour:
   CanAttack: 1
   shootingRate: 0.25
   damage: 1
+  HP: 20
 --- !u!212 &212173084227100960
 SpriteRenderer:
   m_ObjectHideFlags: 1
