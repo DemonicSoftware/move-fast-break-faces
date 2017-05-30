@@ -86,4 +86,5 @@ public class PlayerController : MonoBehaviour {
     public int GetAmmoCount() {
         return combat.GetAmmo();
     }
+
 }

@@ -161,6 +161,7 @@ public class Health : MonoBehaviour
             {
 				damgeCooldownCount = damageCooldown;
                 Damage(1);
+                StartCoroutine(knockback(0.05f , 500,transform.position - otherCollider.transform.position));
             }
         }
 
@@ -184,5 +185,16 @@ public class Health : MonoBehaviour
         damagePanel.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         damagePanel.SetActive(false);
+    }
+
+    public IEnumerator knockback(float knockbackDur, float knockbackPower, Vector3 knockbackDir)
+    {
+        float timer = 0;
+        while (knockbackDur > timer)
+        {
+            timer += Time.deltaTime;
+            GetComponent<Rigidbody2D>().AddForce(new Vector3(knockbackDir.x * knockbackPower, knockbackDir.y * knockbackPower, transform.position.z));
+        }
+        yield return 0;
     }
 }
