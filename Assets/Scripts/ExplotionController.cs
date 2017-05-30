@@ -17,8 +17,16 @@ public class ExplotionController : MonoBehaviour
 		
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        
+        if (otherCollider.CompareTag("Player"))
+        {
+            otherCollider.gameObject.GetComponent<Health>().Damage(1);
+        }
+    }
+
+    void die()
+    {
+        Destroy(gameObject);
     }
 }

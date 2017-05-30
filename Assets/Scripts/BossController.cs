@@ -8,8 +8,12 @@ public class BossController : MonoBehaviour
     public float movementTimer = 3f;
     public float attackCoolDown = 2f;
     public float bossSpeed = 1f;
+    public float fireCastCoolDown = 2f;
+    public float explosionDelay = 2f;
 
-    private float movementTimerCount, attackTimerCount;
+    public GameObject explosionToSpawn;
+
+    private float movementTimerCount, attackTimerCount, fireCastTimerCount, explosionDelayCount;
       
     private Enums.Players targetPlayer = Enums.Players.Player;
     private Enums.Directions useSide = Enums.Directions.Up;
@@ -18,7 +22,9 @@ public class BossController : MonoBehaviour
 
     float randomX, randomY;
     bool goAfterPlayer = false;
+    bool castFire = false;
     int attack = 1;
+    int fireCount = 0;
 
     // Use this for initialization
     void Start ()
@@ -36,6 +42,8 @@ public class BossController : MonoBehaviour
     {
         movementTimerCount += Time.fixedDeltaTime;
         attackTimerCount += Time.fixedDeltaTime;
+        fireCastTimerCount += Time.fixedDeltaTime;
+        explosionDelayCount += Time.fixedDeltaTime;
 
         if (movementTimerCount > movementTimer)
         {
@@ -58,7 +66,7 @@ public class BossController : MonoBehaviour
                 Vector3 vectorToTarget = playerTransform.position - transform.position;
                 float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
                 Quaternion q = Quaternion.AngleAxis(angle - 90, Vector3.forward);
-                transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 2f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.fixedDeltaTime * 1f);
             }
             else
             {
@@ -67,7 +75,7 @@ public class BossController : MonoBehaviour
                 Vector3 vectorToTarget = playerTransform.position - transform.position;
                 float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
                 Quaternion q = Quaternion.AngleAxis(angle - 90, Vector3.forward);
-                transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 2f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.fixedDeltaTime * 1f);
 
                 Attack();
             }
@@ -76,8 +84,27 @@ public class BossController : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().MovePosition(Vector2.Lerp(transform.position, new Vector2(randomX, randomY), Time.fixedDeltaTime * bossSpeed));
             Utils.SetAxisTowards(useSide, transform, new Vector3(randomX, randomY, 0) - transform.position);
+
+            if(fireCastTimerCount > fireCastCoolDown)
+            {
+                anim.SetBool("FireCast", true);
+                fireCastTimerCount = 0;
+            }
         }
 
+        if(castFire && explosionDelayCount > explosionDelay)
+        {
+            GameObject newObject = Instantiate<GameObject>(explosionToSpawn);
+            newObject.transform.position = playerTransform.position;
+
+            fireCount++;
+
+            castFire = false;
+            //if (fireCount >= 1)
+            //{
+            //    castFire = false;
+            //}
+        }
        
     }
 
@@ -109,6 +136,12 @@ public class BossController : MonoBehaviour
         anim.SetBool("bigHit", false);
         anim.SetBool("bigSwing", false);
         anim.SetBool("FireCast", false);
+    }
+
+    void FireCast()
+    {
+        EndAnimation();
+        castFire = true;
     }
 
     public void PlayerEnteredPatrol()

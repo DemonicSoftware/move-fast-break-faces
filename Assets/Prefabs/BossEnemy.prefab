@@ -177,7 +177,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976677680353044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.78, y: -3.08, z: 0}
+  m_LocalPosition: {x: -0.06, y: -0.57, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 4306553717353560}
@@ -357,6 +357,10 @@ MonoBehaviour:
   movementTimer: 3
   attackCoolDown: 2
   bossSpeed: 0.5
+  fireCastCoolDown: 10
+  explosionDelay: 2
+  explosionToSpawn: {fileID: 1158064977598148, guid: e3a9b526a7d13cf41b932a0bebba8847,
+    type: 2}
 --- !u!114 &114724091006405274
 MonoBehaviour:
   m_ObjectHideFlags: 1

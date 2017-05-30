@@ -22,6 +22,5 @@ public class BossLance : MonoBehaviour {
             otherCollider.gameObject.GetComponent < Health > ().Damage(damage);
             StartCoroutine(otherCollider.gameObject.GetComponent<Health>().knockback(0.05f, 500, otherCollider.transform.position - transform.position));
         }
-        //GetComponent<Collider2D>().enabled = false;
     }
 }

@@ -100378,7 +100378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80eddc0a5ced65469c162eafefd48c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 1303154991411114, guid: 138c08d2ac6722d438da22e86ca08abb,
+  prefabToSpawn: {fileID: 1473299885285666, guid: 02a481e55a8fa2840b38872f174946f8,
     type: 2}
   spawnAmount: 80
 --- !u!61 &1691894276
