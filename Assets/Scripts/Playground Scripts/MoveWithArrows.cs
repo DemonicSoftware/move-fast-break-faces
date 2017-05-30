@@ -34,19 +34,43 @@ public class MoveWithArrows : Physics2DObject {
 
     // Update gets called every frame
     void Update ()
-    {	
-		// Moving with the arrow keys
-		if(typeOfControl == Enums.KeyGroups.ArrowKeys) {
-			moveHorizontal = Input.GetAxis("Horizontal");
-			moveVertical = Input.GetAxis("Vertical");
-		}
-		else {
-			moveHorizontal = Input.GetAxis("Horizontal2");
-			moveVertical = Input.GetAxis("Vertical2");
-		}
+    {
+        // Moving with the arrow keys
+        //if (typeOfControl == Enums.KeyGroups.ArrowKeys)
+        //{
+        //    moveHorizontal = Input.GetAxis("Horizontal");
+        //    moveVertical = Input.GetAxis("Vertical");
+        //}
+        //else
+        //{
+        //    moveHorizontal = Input.GetAxis("Horizontal2");
+        //    moveVertical = Input.GetAxis("Vertical2");
+        //}
+        if (Input.GetKey(KeyCode.W))
+        {
+            moveVertical = 1;
+        }           
+        else if(Input.GetKey(KeyCode.S))
+        {
+            moveVertical = -1;
+        }            
+        else
+        {
+            moveVertical = 0;
+        }
+            
 
-		//zero-out the axes that are not needed, if the movement is constrained
-		switch(movementType) {
+        if (Input.GetKey(KeyCode.A))
+            moveHorizontal = -1;
+        else if (Input.GetKey(KeyCode.D))
+            moveHorizontal = 1;
+        else
+            moveHorizontal = 0;
+
+
+
+        //zero-out the axes that are not needed, if the movement is constrained
+        switch (movementType) {
 			case Enums.MovementType.OnlyHorizontal:
 				moveVertical = 0f;
 				break;
