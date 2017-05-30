@@ -78,7 +78,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BossAttack.cs" />
     <Compile Include="Assets\Scripts\BossController.cs" />
+    <Compile Include="Assets\Scripts\BossLance.cs" />
+    <Compile Include="Assets\Scripts\BossPatrolController.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Combat.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
