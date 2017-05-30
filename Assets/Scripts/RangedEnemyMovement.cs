@@ -63,7 +63,7 @@ public class RangedEnemyMovement : Physics2DObject
     {
 		if (followFromAnyDistance) 
 		{
-			if(Vector2.Distance(transform.position, playerTransform.position) > Random.Range(12, 14))
+			if(Vector2.Distance(transform.position, playerTransform.position) > 12)
 			{
 				//Move towards the player
 				rigidbody2D.MovePosition(Vector2.Lerp(transform.position, playerTransform.position, Time.fixedDeltaTime * speed));
