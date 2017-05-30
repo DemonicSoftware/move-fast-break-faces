@@ -46960,21 +46960,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1633556801118732, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114978326864706968, guid: b9f81fe5e01a5dd4cad0db35569bea34,
-        type: 2}
-      propertyPath: Shots
-      value: 
-      objectReference: {fileID: 4258954285876444, guid: 639b4e68d7ea858419dba7b913eabda7,
-        type: 2}
-    - target: {fileID: 114453386010362054, guid: b9f81fe5e01a5dd4cad0db35569bea34,
-        type: 2}
-      propertyPath: speed
-      value: 30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}
   m_IsPrefabParent: 0
