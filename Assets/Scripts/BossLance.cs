@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BossLance : MonoBehaviour {
     public int damage = 1;
-
+    private bool isEnemy = true;
     // Use this for initialization
     void Start () {
-        GetComponent<Collider2D>().enabled = false;
+        //GetComponent<Collider2D>().enabled = false;
     }
 	
 	// Update is called once per frame
@@ -17,6 +17,10 @@ public class BossLance : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        GetComponent<Collider2D>().enabled = false;
+        if (otherCollider.CompareTag("Player"))
+        {
+            otherCollider.gameObject.GetComponent < Health > ().Damage(damage);
+        }
+        //GetComponent<Collider2D>().enabled = false;
     }
 }

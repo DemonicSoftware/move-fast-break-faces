@@ -10,7 +10,7 @@ public class BossAttack : MonoBehaviour {
     public int damage = 1;
     // Use this for initialization
     void Start () {
-        lance.GetComponent<Collider2D>().enabled = false;
+        lance.GetComponent<Collider2D>().enabled = true;
     }
 	
 	// Update is called once per frame
@@ -24,7 +24,7 @@ public class BossAttack : MonoBehaviour {
             if (shootCooldown <= 0f)
             {
                 CanAttack = true;
-                lance.GetComponent<Collider2D>().enabled = false;
+                //lance.GetComponent<Collider2D>().enabled = false;
             }
             else
             {
