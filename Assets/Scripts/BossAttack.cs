@@ -61,6 +61,8 @@ public class BossAttack : MonoBehaviour
                 anim.SetBool("dead", true);
             if (GetComponent<Collider2D>() != null)
                 GetComponent<Collider2D>().enabled = false;
+            GetComponent<BossController>().enabled = false;
+            GameController.gameControllerInstance.EnemyKilled();
         }
     }
 

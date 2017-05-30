@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.tag == "Ammo")
         {
-            combat.gunAmmo += 10;
+            combat.gunAmmo += 2;
             Destroy(other.gameObject);
         }
     }
