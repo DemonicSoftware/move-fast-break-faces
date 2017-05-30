@@ -257,7 +257,7 @@ MonoBehaviour:
   targetPlayer: 0
   followFromAnyDistance: 1
   distanceToFollow: 20
-  speed: 1
+  speed: 2
   lookAtPlayer: 1
   useSide: 0
 --- !u!212 &212048747365322248

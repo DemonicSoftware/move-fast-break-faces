@@ -46970,6 +46970,11 @@ Prefab:
       value: 
       objectReference: {fileID: 4258954285876444, guid: 639b4e68d7ea858419dba7b913eabda7,
         type: 2}
+    - target: {fileID: 114453386010362054, guid: b9f81fe5e01a5dd4cad0db35569bea34,
+        type: 2}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}
   m_IsPrefabParent: 0
@@ -100380,7 +100385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 1473299885285666, guid: 02a481e55a8fa2840b38872f174946f8,
     type: 2}
-  spawnAmount: 80
+  spawnAmount: 100
 --- !u!61 &1691894276
 BoxCollider2D:
   m_ObjectHideFlags: 0
