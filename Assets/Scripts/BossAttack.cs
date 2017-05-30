@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossAttack : MonoBehaviour {
-    public GameObject lance;
+public class BossAttack : MonoBehaviour
+{
     public bool CanAttack = true;
     public float shootingRate = 0.25f;
     private float shootCooldown = 0;
@@ -14,7 +14,6 @@ public class BossAttack : MonoBehaviour {
     private Animator anim;
     // Use this for initialization
     void Start () {
-        lance.GetComponent<Collider2D>().enabled = true;
         anim = GetComponent<Animator>();
     }
 	
@@ -43,7 +42,6 @@ public class BossAttack : MonoBehaviour {
         if (CanAttack)
         {
             shootCooldown = shootingRate;
-            lance.GetComponent<Collider2D>().enabled = true;
         }
     }
 

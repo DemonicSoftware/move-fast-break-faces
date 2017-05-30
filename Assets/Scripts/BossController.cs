@@ -7,10 +7,10 @@ public class BossController : MonoBehaviour
     private BoxCollider2D bossPatrol;
     public float movementTimer = 3f;
     public float attackCoolDown = 2f;
-
+    public float bossSpeed = 1f;
 
     private float movementTimerCount, attackTimerCount;
-    private float bossSpeed = 1f;  
+      
     private Enums.Players targetPlayer = Enums.Players.Player;
     private Enums.Directions useSide = Enums.Directions.Up;
     private Transform playerTransform;
@@ -102,11 +102,13 @@ public class BossController : MonoBehaviour
 
     public void PlayerEnteredPatrol()
     {
+        print("Player Enter");
         goAfterPlayer = true;
     }
 
     public void PlayerExitedPatrol()
     {
+        print("Player Exited");
         goAfterPlayer = false;
     }
 }
