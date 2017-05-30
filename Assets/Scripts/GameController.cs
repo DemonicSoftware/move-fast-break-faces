@@ -10,9 +10,10 @@ public class GameController : MonoBehaviour {
 	public GameObject player;
 	public GameObject gameOverText;
 	public GameObject gameWonText;
+
 	public Text enemyCountText;
 	public Text ammoCountText;
-	public int enemyCount; 
+	public int enemyCount;
 
 	private bool gameLost;
 	private bool gameWon;
@@ -35,7 +36,7 @@ public class GameController : MonoBehaviour {
         }
         if (gameWon && Input.GetKey(KeyCode.F)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            Time.timeScale = 1.0f;
+            Time.timeScale = 1;
         }
         UpdateEnemyCount();
         UpdateAmmoCount();
@@ -55,14 +56,8 @@ public class GameController : MonoBehaviour {
 		if (enemyCount <= 0) {
 			gameWonText.SetActive(true);
 			gameWon = true;
-			StartCoroutine(PauseScene());
 		}
 	}
-
-	IEnumerator PauseScene() {
-        yield return new WaitForSeconds(1.0f);
-        Time.timeScale = 0.0f;
-    }
 
 	public void EnemyKilled() {
 		enemyCount--;
@@ -73,7 +68,7 @@ public class GameController : MonoBehaviour {
 		gameLost = true;
 	}
 
-	public void SetEnemyCount(int count) {
-		enemyCount = count;
+	public int GetEnemyCount() {
+		return enemyCount;
 	}
 }
