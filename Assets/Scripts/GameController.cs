@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour {
         }
         if (gameWon && Input.GetKey(KeyCode.F)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Time.timeScale = 1.0f;
         }
         UpdateEnemyCount();
         UpdateAmmoCount();
