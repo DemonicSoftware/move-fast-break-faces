@@ -53,7 +53,17 @@ public class DialogueController : MonoBehaviour {
 	}
 
 	private void GetSceneDialogue() {
-		sceneSpeaker = new string[] { "Hero", "Hero", "Hero" };
-		sceneDialogue = new string[] { "This is some dialogue. Move through it using the 'f' key.", "It should explain how to hit the bad guys...", "Use WASD to move and left click to break faces!" };
+		string scene = Application.loadedLevelName;
+
+		switch(scene) {
+			case "Level 1":
+				sceneSpeaker = new string[] { "Hero", "Hero", "Hero" };
+				sceneDialogue = new string[] { "This is some dialogue. Move through it using the 'f' key.", "It should explain how to hit the bad guys...", "Use WASD to move and left click to break faces!" };
+				break;
+			case "Level 2":
+				sceneSpeaker = new string[] { "Hero", "Hero", "Hero" };
+				sceneDialogue = new string[] { "This is some other dialogue. Move through it using the 'f' key.", "It should explain how to hit the bad guys...", "Use WASD to move and left click to break faces!" };
+				break;
+		}
 	}
 }
