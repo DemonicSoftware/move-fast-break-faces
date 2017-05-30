@@ -53,11 +53,22 @@ public class BossController : MonoBehaviour
                 GetComponent<Rigidbody2D>().MovePosition(Vector2.Lerp(transform.position, playerTransform.position, Time.fixedDeltaTime * bossSpeed));
 
                 //look towards the player
-                Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
+                //Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
+
+                Vector3 vectorToTarget = playerTransform.position - transform.position;
+                float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+                Quaternion q = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+                transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 2f);
             }
             else
             {
-                Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
+                //Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
+
+                Vector3 vectorToTarget = playerTransform.position - transform.position;
+                float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+                Quaternion q = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+                transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 2f);
+
                 Attack();
             }
         }

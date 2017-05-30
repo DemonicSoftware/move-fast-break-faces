@@ -18,7 +18,13 @@ public class BossAttack : MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        if (dead)
+        {
+            transform.rotation = Quaternion.identity;
+        }
+
         if (CanAttack == false)
         {
             if (shootCooldown > 0)
@@ -50,16 +56,11 @@ public class BossAttack : MonoBehaviour
         HP -= damageCount;
         if(HP <= 0)
         {
-            Destroy(gameObject, 2f);
             dead = true;
             if (GetComponent<Animator>() != null)
                 anim.SetBool("dead", true);
-            if (GetComponent<FollowPlayer>() != null)
-                GetComponent<FollowPlayer>().enabled = false;
             if (GetComponent<Collider2D>() != null)
                 GetComponent<Collider2D>().enabled = false;
-            if (GetComponent<RangedEnemyMovement>() != null)
-                GetComponent<RangedEnemyMovement>().enabled = false;
         }
     }
 
