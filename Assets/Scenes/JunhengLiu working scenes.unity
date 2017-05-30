@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 43010405}
   m_Layer: 0
   m_Name: Enviroment Colliders (13)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -845,7 +845,7 @@ GameObject:
   - component: {fileID: 104881914}
   m_Layer: 0
   m_Name: Enviroment Colliders (7)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1086,7 +1086,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &109549041
 GameObject:
@@ -2211,7 +2211,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &269561496
 MonoBehaviour:
@@ -2306,7 +2306,7 @@ GameObject:
   - component: {fileID: 314304795}
   m_Layer: 0
   m_Name: Enviroment Colliders (8)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2360,7 +2360,7 @@ GameObject:
   - component: {fileID: 322434647}
   m_Layer: 0
   m_Name: Enviroment Colliders (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2672,7 +2672,7 @@ GameObject:
   - component: {fileID: 394579397}
   m_Layer: 0
   m_Name: Enviroment Colliders (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4526,7 +4526,7 @@ GameObject:
   - component: {fileID: 740623748}
   m_Layer: 0
   m_Name: Enviroment Colliders (9)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4606,7 +4606,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4821249833382700, guid: 97e1ceb6cdd29934eb89d444c43b86c3, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 95502209797969684, guid: 97e1ceb6cdd29934eb89d444c43b86c3,
         type: 2}
@@ -4632,7 +4632,7 @@ GameObject:
   - component: {fileID: 754879025}
   m_Layer: 0
   m_Name: Enviroment Colliders (10)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5159,7 +5159,7 @@ Transform:
   m_Children:
   - {fileID: 484348596}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &911951186
 GameObject:
@@ -7663,7 +7663,7 @@ GameObject:
   - component: {fileID: 1307474392}
   m_Layer: 0
   m_Name: Enviroment Colliders (12)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8327,8 +8327,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e57d4f8ba8677439c8de9aa086ad1c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   gameOverText: {fileID: 981733147}
-  gameLost: 0
+  gameWonText: {fileID: 0}
+  enemyCountText: {fileID: 0}
+  ammoCountText: {fileID: 0}
+  enemyCount: 0
 --- !u!4 &1387899344
 Transform:
   m_ObjectHideFlags: 0
@@ -8340,7 +8344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415179020
 GameObject:
@@ -9112,7 +9116,7 @@ GameObject:
   - component: {fileID: 1513751742}
   m_Layer: 0
   m_Name: Enviroment Colliders (5)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9649,7 +9653,7 @@ GameObject:
   - component: {fileID: 1580663791}
   m_Layer: 0
   m_Name: Enviroment Colliders (6)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10176,6 +10180,11 @@ Prefab:
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114978326864706968, guid: b9f81fe5e01a5dd4cad0db35569bea34,
+        type: 2}
+      propertyPath: gunAmmo
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114683400768322222, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}
@@ -10371,7 +10380,7 @@ GameObject:
   - component: {fileID: 1688967224}
   m_Layer: 0
   m_Name: Enviroment Colliders
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10426,7 +10435,7 @@ Transform:
   - {fileID: 43010404}
   - {fileID: 1886731714}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1699255094
 GameObject:
@@ -10690,7 +10699,7 @@ Transform:
   - {fileID: 1642814118}
   - {fileID: 63532971}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1721654412
 GameObject:
@@ -10987,7 +10996,7 @@ RectTransform:
   - {fileID: 981733148}
   - {fileID: 731408819}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11419,7 +11428,7 @@ GameObject:
   - component: {fileID: 1886731715}
   m_Layer: 0
   m_Name: Enviroment Colliders (14)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11844,7 +11853,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4045699188310608, guid: 2345ee8e28e87a1499690e860fa27b09, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2345ee8e28e87a1499690e860fa27b09, type: 2}
@@ -11929,7 +11938,7 @@ GameObject:
   - component: {fileID: 1966877310}
   m_Layer: 0
   m_Name: Enviroment Colliders (11)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11983,7 +11992,7 @@ GameObject:
   - component: {fileID: 1970907063}
   m_Layer: 0
   m_Name: Enviroment Colliders (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12318,6 +12327,48 @@ Transform:
   m_Father: {fileID: 1702694172}
   m_RootOrder: 110
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2015155492
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4460055634655046, guid: 06b06607a8aeefa4982aa1b78c8f938b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 55.719124
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460055634655046, guid: 06b06607a8aeefa4982aa1b78c8f938b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -12.146761
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460055634655046, guid: 06b06607a8aeefa4982aa1b78c8f938b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460055634655046, guid: 06b06607a8aeefa4982aa1b78c8f938b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460055634655046, guid: 06b06607a8aeefa4982aa1b78c8f938b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460055634655046, guid: 06b06607a8aeefa4982aa1b78c8f938b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460055634655046, guid: 06b06607a8aeefa4982aa1b78c8f938b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4460055634655046, guid: 06b06607a8aeefa4982aa1b78c8f938b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 06b06607a8aeefa4982aa1b78c8f938b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2035308066
 GameObject:
   m_ObjectHideFlags: 0
@@ -13295,7 +13346,7 @@ GameObject:
   - component: {fileID: 2137801284}
   m_Layer: 0
   m_Name: Enviroment Colliders (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

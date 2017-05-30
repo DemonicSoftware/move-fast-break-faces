@@ -83,12 +83,15 @@ public class Health : MonoBehaviour
             {
 				dead = true;
 				anim.SetBool ("dead", true);
-				GetComponent<LookAtCursor>().enabled = false;
-				GetComponent<MoveWithArrows>().enabled = false;
-				GetComponent<BoxCollider2D> ().enabled = false;
+                if (GetComponent<LookAtCursor>() != null)
+                    GetComponent<LookAtCursor>().enabled = false;
+                if (GetComponent<MoveWithArrows>() != null)
+                    GetComponent<MoveWithArrows>().enabled = false;
+                if (GetComponent<BoxCollider2D>() != null)
+                    GetComponent<BoxCollider2D> ().enabled = false;
                 GameController.gameControllerInstance.PlayerDied();
                 if(GetComponent<AudioSource>() != null)
-				GetComponent<AudioSource>().Play();
+				    GetComponent<AudioSource>().Play();
 			}
 		}
 	}

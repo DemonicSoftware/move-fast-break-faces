@@ -35,4 +35,10 @@ public class RangeAttack : MonoBehaviour {
 	void FixedUpdate() {
 		rb2d.AddForce(movement * speed);
 	}
+
+    void OnTriggerEnter2D(Collider2D otherCollider)
+    {
+        if(otherCollider.CompareTag("Wall"))
+            Destroy(gameObject);
+    }
 }
