@@ -6,31 +6,51 @@ public class LevelSwitcher : MonoBehaviour {
 
 	public void LoadLevelOne() {
 		Application.LoadLevel("Level 1");
-		Time.timeScale = 1.0f;
 	}
 
 	public void LoadLevelTwo() {
 		Application.LoadLevel("Level 2");
-		Time.timeScale = 1.0f;
 	}
 
 	public void LoadLevelThree() {
 		Application.LoadLevel("Level 3");
-		Time.timeScale = 1.0f;
 	}
 
 	public void LoadLevelFour() {
 		Application.LoadLevel("Level 4");
-		Time.timeScale = 1.0f;
 	}
 
 	public void LoadLevelFive() {
 		Application.LoadLevel("Level 5");
-		Time.timeScale = 1.0f;
 	}
 
 	public void LoadMainMenu() {
 		Application.LoadLevel("Main Menu");
-		Time.timeScale = 1.0f;
+	}
+
+	public void LoadNextLevel() {
+		string scene = Application.loadedLevelName;
+
+		switch(scene) {
+			case "Level 1":
+				LoadLevelTwo();
+				break;
+
+			case "Level 2":
+				LoadLevelThree();
+				break;
+
+			case "Level 3":
+				LoadLevelFour();
+				break;
+
+			case "Level 4":
+				LoadLevelFive();
+				break;
+
+			case "Level 5":
+				LoadMainMenu();
+				break;
+		}
 	}
 }

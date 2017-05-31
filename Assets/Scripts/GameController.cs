@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour {
 
 	private bool gameLost;
 	private bool gameWon;
+	private LevelSwitcher levelSwitcher;
 
 	void Awake() {
 		if (gameControllerInstance == null) {
@@ -28,6 +29,8 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void Update () {
+		levelSwitcher = new LevelSwitcher();
+
 		if (Input.GetKey(KeyCode.Escape)) {
             Application.LoadLevel("Main Menu");
         }
@@ -35,7 +38,7 @@ public class GameController : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         if (gameWon && Input.GetKey(KeyCode.F)) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            levelSwitcher.LoadNextLevel();
             Time.timeScale = 1;
         }
         UpdateEnemyCount();
