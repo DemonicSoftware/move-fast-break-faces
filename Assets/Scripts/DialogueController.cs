@@ -23,6 +23,9 @@ public class DialogueController : MonoBehaviour {
 	}
 	
 	void Update () {
+		if (Input.GetKey(KeyCode.X)) {
+            EndDialogue();
+        }
 		if (Input.GetKey(KeyCode.F) && clickCoolDown <= 0) {
             lineCount++;
             clickCoolDown = 25;
@@ -43,6 +46,14 @@ public class DialogueController : MonoBehaviour {
 	}
 
 	private void DisplayDialogue(string speakerName, string dialogue) {
+		if (speakerName == "Larry") {
+			speakerText.color = Color.red;
+			dialogueText.color = Color.red;
+		}
+		else {
+			speakerText.color = Color.white;
+			dialogueText.color = Color.white;
+		}
 		speakerText.text = speakerName;
 		dialogueText.text = dialogue;
 	}
@@ -55,29 +66,34 @@ public class DialogueController : MonoBehaviour {
 	private void GetSceneDialogue() {
 		string scene = Application.loadedLevelName;
 
+		string l = "Larry";
+		string v = "Voice";
+
 		switch(scene) {
 			case "Level 1":
-				sceneSpeaker = new string[] { "Hero", "Hero", "Hero" };
-				sceneDialogue = new string[] { "This is some dialogue. Move through it using the 'f' key.", "It should explain how to hit the bad guys...", "Use WASD to move and left click to break faces!" };
-				// Specifically talk about left click and pointer...
-				// Boss welcome to dungeon
-				// tell player they have to kill a number of enemies to WIN
-				// Talk about health
+				sceneSpeaker = new string[] { v, l, v, l, v, v, l, v, v, l, v, v };
+				sceneDialogue = new string[] { "Wake up Larry... and welcome... TO YOUR DOOOOOOOOOOOM (use the 'f' key to progress through dialogue)", "Who are... what is this?", "Who I am doesn't matter and you're here because I decided to put you through an arbitrary series of life or death trials for my own entertainment.", "...", "Anyway! Take a look arround the room using your cursor.", "Once I unpause time you'll be able to move arround with WASD.", "Is this just an elaborate prank?", "You can swing that baseball bat there with your left mouse button 'LMB' to break the faces of your enemies!", "Your health is displayed behind you in a bar and you will die if it reaches 0.", "WHAT ARE YOU ON ABOUT, YOU LUNATIC?", "This... Larry...", "... is only the tutorial! HAHAHHAHHAHHAHHAHA!" };
 				break;
+
 			case "Level 2":
-				sceneSpeaker = new string[] { "Hero", "Hero", "Hero" };
-				sceneDialogue = new string[] { "This is some other dialogue. Move through it using the 'f' key.", "You can pick up hammers on the ground and throw them.", "Use right click to do that." };
-				// Talk about hammer suggest to pick it up and use it 
-				// on enemioes behind pit
+				sceneSpeaker = new string[] { l, v, v, v, v, v, v, v };
+				sceneDialogue = new string[] { "What the hell were those things?", "Well done, Larry.", "But I like it rare and you... are nothing special.", "I am now introducing a new mechanic - HAMMERS!", "You can pick them up and throw them at enemies...", "... using your your right mouse button 'RMB'! HAHAHHAHHHAHHAHAHAH!", "Go pick that one up and throw it at those enemies over there!", "I'm so EXCITED I can barely contain myself!" };
 				break;
 
-				// Look out for ranged enemies
+			case "Level 3":
+				sceneSpeaker = new string[] { v, v, l, v };
+				sceneDialogue = new string[] { "Oh how fun that was!", "Time for a NEW MECHANIC, Larry!", "Please! No more objects, rules or mechanic! There's only so much my heart can take!", "There are now RANGED enemies. They'll fire orbs of orb'iness at you so be careful HAHAHA!" };
+				break;
 
-				// Boss dialogue
-				// Talk about how to win
+			case "Level 4":
+				sceneSpeaker = new string[] { v, l, v };
+				sceneDialogue = new string[] { "Guess what, Larry?", "... a... a new mechic?", "Time for the boss level! Have ALL OF MY MECHANICS AT THE SAME TIME!" };
+				break;
 
-				// Exposition and stuff
-				// Tell player they need to escape
+			case "Level 5":
+				sceneSpeaker = new string[] { v, "", l };
+				sceneDialogue = new string[] { "Oh well, that was fun while it lasted, TIME FOR YOU TO MAKE YOUR EXIT, Larry!", "*rumbling sounds*", "What... what was that?" };
+				break;
 		}
 	}
 }
