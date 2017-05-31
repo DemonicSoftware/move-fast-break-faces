@@ -28,4 +28,9 @@ public class LevelSwitcher : MonoBehaviour {
 		Application.LoadLevel("Level 5");
 		Time.timeScale = 1.0f;
 	}
+
+	public void LoadMainMenu() {
+		Application.LoadLevel("Main Menu");
+		Time.timeScale = 1.0f;
+	}
 }

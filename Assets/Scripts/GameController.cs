@@ -72,6 +72,11 @@ public class GameController : MonoBehaviour {
 		gameLost = true;
 	}
 
+	public void PlayerWon() {
+		gameOverText.SetActive(true);
+		gameWon = true;
+	}
+
 	public int GetEnemyCount() {
 		return enemyCount;
 	}
