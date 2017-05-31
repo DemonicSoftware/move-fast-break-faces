@@ -44,7 +44,11 @@ public class GameController : MonoBehaviour {
 	}
 
 	void UpdateEnemyCount() {
-		enemyCountText.text = "Enemies Left: " + enemyCount.ToString();
+		string t = "Enemies Left:";
+		if (Application.loadedLevelName == "Level 4") {
+			t = "Boss Health: ";
+		}
+		enemyCountText.text = t + enemyCount.ToString();
 	}
 
 	void UpdateAmmoCount() {

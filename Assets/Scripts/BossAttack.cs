@@ -54,6 +54,7 @@ public class BossAttack : MonoBehaviour
     void Damage(int damageCount)
     {
         HP -= damageCount;
+		GameController.gameControllerInstance.EnemyKilled();
         if(HP <= 0)
         {
             dead = true;
@@ -62,7 +63,7 @@ public class BossAttack : MonoBehaviour
             if (GetComponent<Collider2D>() != null)
                 GetComponent<Collider2D>().enabled = false;
             GetComponent<BossController>().enabled = false;
-            GameController.gameControllerInstance.EnemyKilled();
+            
         }
     }
 

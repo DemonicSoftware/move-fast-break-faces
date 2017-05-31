@@ -3968,6 +3968,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114993555244897546, guid: bd00a3f739f1ea04fa3b2b5fc3c1d3c0,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Enemy Count: 0'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd00a3f739f1ea04fa3b2b5fc3c1d3c0, type: 2}
   m_IsPrefabParent: 0
@@ -9823,7 +9828,7 @@ Prefab:
     - target: {fileID: 114532310717578202, guid: b5cf69683137741db97c98d4b732be20,
         type: 2}
       propertyPath: enemyCount
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114532310717578202, guid: b5cf69683137741db97c98d4b732be20,
         type: 2}
