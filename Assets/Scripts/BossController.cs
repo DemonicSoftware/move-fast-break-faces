@@ -100,10 +100,11 @@ public class BossController : MonoBehaviour
             fireCount++;
 
             castFire = false;
-            //if (fireCount >= 1)
-            //{
-            //    castFire = false;
-            //}
+//            if (fireCount >= 3)
+//            {
+//                castFire = false;
+//				fireCount = 0;
+//            }
         }
        
     }
