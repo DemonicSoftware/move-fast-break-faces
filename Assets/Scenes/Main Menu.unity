@@ -175,7 +175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Face Breakerz
+  m_Text: Move Fast, Break Faces
 --- !u!222 &145132808
 CanvasRenderer:
   m_ObjectHideFlags: 0
