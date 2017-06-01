@@ -10086,7 +10086,7 @@ Prefab:
     - target: {fileID: 114532310717578202, guid: b5cf69683137741db97c98d4b732be20,
         type: 2}
       propertyPath: enemyCount
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114532310717578202, guid: b5cf69683137741db97c98d4b732be20,
         type: 2}

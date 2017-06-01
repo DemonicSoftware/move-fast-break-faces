@@ -177,7 +177,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976677680353044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -0.57, z: -0.39}
+  m_LocalPosition: {x: -9.78, y: -3.08, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 4306553717353560}
@@ -259,7 +259,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5.8752
+  m_Mass: 100
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
   attackCoolDown: 2
   bossSpeed: 0.5
   fireCastCoolDown: 4
-  explosionDelay: 2
+  explosionDelay: 0.1
   explosionToSpawn: {fileID: 1158064977598148, guid: e3a9b526a7d13cf41b932a0bebba8847,
     type: 2}
 --- !u!114 &114724091006405274
@@ -387,7 +387,7 @@ MonoBehaviour:
   CanAttack: 1
   shootingRate: 0.25
   damage: 1
-  HP: 10
+  HP: 20
 --- !u!212 &212173084227100960
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -9,7 +9,7 @@ public class BossController : MonoBehaviour
     public float attackCoolDown = 2f;
     public float bossSpeed = 1f;
     public float fireCastCoolDown = 2f;
-    public float explosionDelay = 2f;
+    public float explosionDelay = 0.02f;
 
     public GameObject explosionToSpawn;
 
@@ -23,6 +23,7 @@ public class BossController : MonoBehaviour
     float randomX, randomY;
     bool goAfterPlayer = false;
     bool castFire = false;
+    bool attackAnimationRunning = false;
     int attack = 1;
     int fireCount = 0;
 
@@ -37,7 +38,7 @@ public class BossController : MonoBehaviour
         goAfterPlayer = false;
     }
 
-    // Update is called once per frame
+
     void FixedUpdate()
     {
         movementTimerCount += Time.fixedDeltaTime;
@@ -60,22 +61,27 @@ public class BossController : MonoBehaviour
                 //Move towards the player
                 GetComponent<Rigidbody2D>().MovePosition(Vector2.Lerp(transform.position, playerTransform.position, Time.fixedDeltaTime * bossSpeed));
 
-                //look towards the player
-                //Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
+                if (!attackAnimationRunning)
+                {
+                    Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
 
-                Vector3 vectorToTarget = playerTransform.position - transform.position;
-                float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-                Quaternion q = Quaternion.AngleAxis(angle - 90, Vector3.forward);
-                transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.fixedDeltaTime * 1f);
+                    //Vector3 vectorToTarget = playerTransform.position - transform.position;
+                    //float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+                    //Quaternion q = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+                    //transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.fixedDeltaTime * 3f);
+                }
             }
             else
             {
-                //Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
+                if (!attackAnimationRunning)
+                {
+                    Utils.SetAxisTowards(useSide, transform, playerTransform.position - transform.position);
 
-                Vector3 vectorToTarget = playerTransform.position - transform.position;
-                float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-                Quaternion q = Quaternion.AngleAxis(angle - 90, Vector3.forward);
-                transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.fixedDeltaTime * 1f);
+                    //Vector3 vectorToTarget = playerTransform.position - transform.position;
+                    //float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+                    //Quaternion q = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+                    //transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.fixedDeltaTime * 3f);
+                }
 
                 Attack();
             }
@@ -92,27 +98,29 @@ public class BossController : MonoBehaviour
             }
         }
 
-        if(castFire && explosionDelayCount > explosionDelay)
+        if (castFire && explosionDelayCount >= explosionDelay)
         {
+            explosionDelayCount = 0;
             GameObject newObject = Instantiate<GameObject>(explosionToSpawn);
             newObject.transform.position = playerTransform.position;
 
             fireCount++;
 
-            castFire = false;
-//            if (fireCount >= 3)
-//            {
-//                castFire = false;
-//				fireCount = 0;
-//            }
+            //castFire = false;
+            if (fireCount >= 3)
+            {
+                castFire = false;
+                fireCount = 0;
+            }
         }
-       
+
     }
 
     void Attack()
     {
         if(attackTimerCount > attackCoolDown)
         {
+            attackAnimationRunning = true;
             attackTimerCount = 0;
             switch (attack)
             {
@@ -126,6 +134,10 @@ public class BossController : MonoBehaviour
                     break;
                 case 3:
                     anim.SetBool("bigSwing", true);
+                    attack++;
+                    break;
+                case 4:
+                    anim.SetBool("FireCast", true);
                     attack = 1;
                     break;
             }
@@ -134,6 +146,7 @@ public class BossController : MonoBehaviour
 
     void EndAnimation()
     {
+        attackAnimationRunning = false;
         anim.SetBool("bigHit", false);
         anim.SetBool("bigSwing", false);
         anim.SetBool("FireCast", false);
