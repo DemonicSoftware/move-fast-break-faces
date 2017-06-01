@@ -1,35 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class LevelSwitcher : MonoBehaviour {
+public class LevelSwitcher : ScriptableObject
+{
 
-	public void LoadLevelOne() {
-		Application.LoadLevel("Level 1");
+	public void LoadLevelOne()
+    {
+
+        SceneManager.LoadScene("Level 1");
 	}
 
 	public void LoadLevelTwo() {
-		Application.LoadLevel("Level 2");
+        SceneManager.LoadScene("Level 2");
 	}
 
 	public void LoadLevelThree() {
-		Application.LoadLevel("Level 3");
+        SceneManager.LoadScene("Level 3");
 	}
 
 	public void LoadLevelFour() {
-		Application.LoadLevel("Level 4");
+        SceneManager.LoadScene("Level 4");
 	}
 
 	public void LoadLevelFive() {
-		Application.LoadLevel("Level 5");
+        SceneManager.LoadScene("Level 5");
 	}
 
 	public void LoadMainMenu() {
-		Application.LoadLevel("Main Menu");
+        SceneManager.LoadScene("Main Menu");
 	}
 
 	public void LoadNextLevel() {
-		string scene = Application.loadedLevelName;
+        string scene = SceneManager.GetActiveScene().name;
 
 		switch(scene) {
 			case "Level 1":

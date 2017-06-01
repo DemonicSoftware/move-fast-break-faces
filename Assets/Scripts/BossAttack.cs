@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossAttack : MonoBehaviour
 {
@@ -9,12 +10,16 @@ public class BossAttack : MonoBehaviour
     private float shootCooldown = 0;
     public int damage = 1;
     public int HP = 20;
+    public Slider healthSlider;
+
     private bool dead = false;
     private bool isEnemy = true;
     private Animator anim;
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         anim = GetComponent<Animator>();
+        healthSlider.maxValue = HP;
     }
 	
 	// Update is called once per frame
@@ -54,9 +59,11 @@ public class BossAttack : MonoBehaviour
     void Damage(int damageCount)
     {
         HP -= damageCount;
-		GameController.gameControllerInstance.EnemyKilled();
+        healthSlider.value = HP;
+		//GameController.gameControllerInstance.EnemyKilled();
         if(HP <= 0)
         {
+            GameObject.Find("GameContoller").GetComponent<GameController>().BossKilled();
             dead = true;
             if (GetComponent<Animator>() != null)
                 anim.SetBool("dead", true);

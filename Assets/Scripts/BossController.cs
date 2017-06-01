@@ -160,13 +160,12 @@ public class BossController : MonoBehaviour
 
     public void PlayerEnteredPatrol()
     {
-        print("Player Enter");
         goAfterPlayer = true;
     }
 
     public void PlayerExitedPatrol()
     {
-        print("Player Exited");
+  
         goAfterPlayer = false;
     }
 }

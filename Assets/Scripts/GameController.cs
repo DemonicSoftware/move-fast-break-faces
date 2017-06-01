@@ -31,8 +31,9 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		levelSwitcher = new LevelSwitcher();
 
-		if (Input.GetKey(KeyCode.Escape)) {
-            Application.LoadLevel("Main Menu");
+		if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Main Menu");
         }
         if (gameLost && Input.GetKey(KeyCode.R)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -51,10 +52,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	void UpdateEnemyCount() {
-		string t = "Enemies Left:";
-		if (Application.loadedLevelName == "Level 4") {
-			t = "Boss Health: ";
-		}
+		string t = "Enemies Left:";		
         if(enemyCountText != null)
 		    enemyCountText.text = t + enemyCount.ToString();
 	}
@@ -90,7 +88,14 @@ public class GameController : MonoBehaviour {
         Time.timeScale = 0;
 	}
 
-	public int GetEnemyCount() {
+	public int GetEnemyCount()
+    {
 		return enemyCount;
 	}
+
+    public void BossKilled()
+    {
+        gameWonText.SetActive(true);
+        gameWon = true;
+    }
 }

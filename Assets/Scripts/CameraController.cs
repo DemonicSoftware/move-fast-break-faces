@@ -19,6 +19,7 @@ public class CameraController : MonoBehaviour {
 	void FixedUpdate () {
 
 		mycam.orthographicSize = (Screen.height / 100f) / 0.6f;
+        print(mycam.orthographicSize);
 
 		if (target) 
 		{
