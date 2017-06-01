@@ -43,7 +43,11 @@ public class GameController : MonoBehaviour {
         }
         UpdateEnemyCount();
         UpdateAmmoCount();
-        CheckWin();
+        if(SceneManager.GetActiveScene().name != "Level 5")
+        {
+            CheckWin();
+        }
+        
 	}
 
 	void UpdateEnemyCount() {
@@ -51,12 +55,15 @@ public class GameController : MonoBehaviour {
 		if (Application.loadedLevelName == "Level 4") {
 			t = "Boss Health: ";
 		}
-		enemyCountText.text = t + enemyCount.ToString();
+        if(enemyCountText != null)
+		    enemyCountText.text = t + enemyCount.ToString();
 	}
 
-	void UpdateAmmoCount() {
+	void UpdateAmmoCount()
+    {
 		int ammo = player.GetComponent<PlayerController>().GetAmmoCount();
-		ammoCountText.text = "Hammers: " + ammo.ToString();
+        if(ammoCountText != null)
+		    ammoCountText.text = "Hammers: " + ammo.ToString();
 	}
 
 	void CheckWin() {
@@ -75,9 +82,12 @@ public class GameController : MonoBehaviour {
 		gameLost = true;
 	}
 
-	public void PlayerWon() {
-		gameOverText.SetActive(true);
+	public void PlayerWon()
+    {
+        gameWonText.SetActive(true);
 		gameWon = true;
+        GameObject.Find("HealthBar").GetComponent<SpriteRenderer>().enabled = false;
+        Time.timeScale = 0;
 	}
 
 	public int GetEnemyCount() {

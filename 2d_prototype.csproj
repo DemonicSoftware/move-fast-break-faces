@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Level4EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Level5Wincondition.cs" />
     <Compile Include="Assets\Scripts\LevelSwitcher.cs" />
     <Compile Include="Assets\Scripts\MeleeAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
