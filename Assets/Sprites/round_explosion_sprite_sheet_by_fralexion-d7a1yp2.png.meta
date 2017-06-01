@@ -1,0 +1,316 @@
+fileFormatVersion: 2
+guid: e80fc78c2beee08408a52cdc472d833e
+timeCreated: 1496293335
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_0
+    21300002: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_1
+    21300004: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_2
+    21300006: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_3
+    21300008: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_4
+    21300010: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_5
+    21300012: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_6
+    21300014: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_7
+    21300016: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_8
+    21300018: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_9
+    21300020: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_10
+    21300022: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_11
+    21300024: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_12
+    21300026: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_13
+    21300028: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_14
+    21300030: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_15
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.37497798, y: 0.8785877}
+  spriteBorder: {x: 130, y: 385, z: 257, w: 2}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 384
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 388
+        width: 122
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 4, y: 3, z: 2, w: 1}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 380
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 380
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 254
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_5
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 254
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_6
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 254
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 254
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 128
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_9
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 128
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_10
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 128
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_13
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 2
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_14
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 2
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: round_explosion_sprite_sheet_by_fralexion-d7a1yp2_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
