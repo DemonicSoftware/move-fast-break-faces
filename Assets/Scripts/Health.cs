@@ -11,7 +11,8 @@ public class Health : MonoBehaviour
 	private float damgeCooldownCount;
     private Animator anim;
     public GameObject damagePanel;
-	private AudioSource[] zombieAudio;
+	private AudioSource[] enemyAudio;
+	private AudioSource[] playerAudio;
 	private bool dead = false;
 
     private Vector3 healthScale;
@@ -49,6 +50,10 @@ public class Health : MonoBehaviour
             StartCoroutine(showDamaged());
             // Update what the health bar looks like.
             UpdateHealthBar();
+			playerAudio = GetComponents<AudioSource>();
+			playerAudio [0].Play ();
+
+
         }
 
 		if (HP <= 0)
@@ -67,15 +72,10 @@ public class Health : MonoBehaviour
                     GetComponent<Collider2D>().enabled = false;
                 if(GetComponent<RangedEnemyMovement>() != null)
                     GetComponent<RangedEnemyMovement>().enabled = false;
-				
 
-//				zombieAudio = GetComponents<AudioSource>();
-//                if (GetComponents<AudioSource>() != null)
-//                {
-//                    zombieAudio[0].enabled = false;
-//                    zombieAudio[1].Play();
-//                }
-;
+				enemyAudio = GetComponents<AudioSource> ();
+				enemyAudio [0].Play ();
+
 				GameController.gameControllerInstance.EnemyKilled();
 			}
 
@@ -90,8 +90,6 @@ public class Health : MonoBehaviour
                 if (GetComponent<BoxCollider2D>() != null)
                     GetComponent<BoxCollider2D> ().enabled = false;
                 GameController.gameControllerInstance.PlayerDied();
-                if(GetComponent<AudioSource>() != null)
-				    GetComponent<AudioSource>().Play();
 			}
 		}
 	}

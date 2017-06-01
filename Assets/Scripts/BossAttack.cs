@@ -12,6 +12,7 @@ public class BossAttack : MonoBehaviour
     public int HP = 20;
     public Slider healthSlider;
 
+	private AudioSource[] bossAudio;
     private bool dead = false;
     private bool isEnemy = true;
     private Animator anim;
@@ -60,6 +61,10 @@ public class BossAttack : MonoBehaviour
     {
         HP -= damageCount;
         healthSlider.value = HP;
+
+		bossAudio = GetComponents<AudioSource> ();
+		bossAudio [0].Play ();
+
 		//GameController.gameControllerInstance.EnemyKilled();
         if(HP <= 0)
         {

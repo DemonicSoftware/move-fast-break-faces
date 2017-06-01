@@ -1522,6 +1522,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -1749,7 +1753,7 @@ GameObject:
   - component: {fileID: 45965205}
   m_Layer: 0
   m_Name: Enviro Collider (15)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4729,7 +4733,7 @@ GameObject:
   - component: {fileID: 111611979}
   m_Layer: 0
   m_Name: Enviro Collider (31)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4854,6 +4858,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -6336,6 +6344,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -7961,6 +7973,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -9486,7 +9502,7 @@ GameObject:
   - component: {fileID: 222328176}
   m_Layer: 0
   m_Name: Enviro Collider (24)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10704,6 +10720,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -11513,6 +11533,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -12896,7 +12920,7 @@ GameObject:
   - component: {fileID: 294128281}
   m_Layer: 0
   m_Name: Enviro Collider (14)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13267,7 +13291,7 @@ GameObject:
   - component: {fileID: 312485901}
   m_Layer: 0
   m_Name: Enviro Collider (7)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13638,7 +13662,7 @@ GameObject:
   - component: {fileID: 319166293}
   m_Layer: 0
   m_Name: Enviro Collider (13)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14592,6 +14616,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -14688,6 +14716,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -14975,7 +15007,7 @@ GameObject:
   - component: {fileID: 363632879}
   m_Layer: 0
   m_Name: Enviro Collider (10)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18273,7 +18305,7 @@ GameObject:
   - component: {fileID: 465354886}
   m_Layer: 0
   m_Name: Enviro Collider (39)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22508,6 +22540,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -23238,7 +23274,7 @@ GameObject:
   - component: {fileID: 599672963}
   m_Layer: 0
   m_Name: Enviro Collider (38)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24989,7 +25025,7 @@ GameObject:
   - component: {fileID: 650089630}
   m_Layer: 0
   m_Name: Enviro Collider (25)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25114,6 +25150,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -27912,6 +27952,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -28418,7 +28462,7 @@ GameObject:
   - component: {fileID: 747142555}
   m_Layer: 0
   m_Name: Enviro Collider (12)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31485,6 +31529,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -32916,6 +32964,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -33682,7 +33734,7 @@ GameObject:
   - component: {fileID: 881870630}
   m_Layer: 0
   m_Name: Enviro Collider (37)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34367,7 +34419,7 @@ GameObject:
   - component: {fileID: 908864117}
   m_Layer: 0
   m_Name: Enviro Collider (21)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34669,7 +34721,7 @@ GameObject:
   - component: {fileID: 914989050}
   m_Layer: 0
   m_Name: Enviro Collider (35)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34833,7 +34885,7 @@ GameObject:
   - component: {fileID: 917748102}
   m_Layer: 0
   m_Name: Enviro Collider (9)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35876,7 +35928,7 @@ GameObject:
   - component: {fileID: 944358111}
   m_Layer: 0
   m_Name: Enviro Collider (20)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37019,6 +37071,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -37622,6 +37678,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -37642,7 +37702,7 @@ GameObject:
   - component: {fileID: 991376248}
   m_Layer: 0
   m_Name: Enviro Collider (17)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38021,6 +38081,10 @@ Prefab:
     - target: {fileID: 4748270364435426, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -38900,6 +38964,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -40125,6 +40193,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -40835,7 +40907,7 @@ GameObject:
   - component: {fileID: 1095540203}
   m_Layer: 0
   m_Name: Enviro Collider (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41029,6 +41101,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -43526,7 +43602,7 @@ GameObject:
   - component: {fileID: 1136802219}
   m_Layer: 0
   m_Name: Enviro Collider (23)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44018,7 +44094,7 @@ GameObject:
   - component: {fileID: 1151467102}
   m_Layer: 0
   m_Name: Enviro Collider (11)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44281,6 +44357,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -44954,6 +45034,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -45319,7 +45403,7 @@ GameObject:
   - component: {fileID: 1196231088}
   m_Layer: 0
   m_Name: Enviro Collider (26)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46104,7 +46188,7 @@ GameObject:
   - component: {fileID: 1223576378}
   m_Layer: 0
   m_Name: Enviro Collider (5)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47484,7 +47568,7 @@ GameObject:
   - component: {fileID: 1271717607}
   m_Layer: 0
   m_Name: Enviro Collider (36)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48407,7 +48491,7 @@ GameObject:
   - component: {fileID: 1296545387}
   m_Layer: 0
   m_Name: Enviro Collider (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48857,7 +48941,7 @@ GameObject:
   - component: {fileID: 1304318437}
   m_Layer: 0
   m_Name: Enviro Collider (16)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49938,7 +50022,7 @@ GameObject:
   - component: {fileID: 1323691743}
   m_Layer: 0
   m_Name: Enviro Collider (29)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50202,6 +50286,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -50252,6 +50340,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -51346,7 +51438,7 @@ GameObject:
   - component: {fileID: 1363009873}
   m_Layer: 0
   m_Name: Enviro Collider (33)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52251,7 +52343,7 @@ GameObject:
   - component: {fileID: 1388255175}
   m_Layer: 0
   m_Name: Enviro Collider (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52514,6 +52606,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -53652,6 +53748,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -53810,7 +53910,7 @@ GameObject:
   - component: {fileID: 1438867968}
   m_Layer: 0
   m_Name: Enviro Collider (27)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56078,7 +56178,7 @@ GameObject:
   - component: {fileID: 1505259136}
   m_Layer: 0
   m_Name: Enviro Collider (8)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59431,6 +59531,10 @@ Prefab:
       propertyPath: m_Name
       value: FireBowl (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
   m_IsPrefabParent: 0
@@ -60417,7 +60521,7 @@ GameObject:
   - component: {fileID: 1664790852}
   m_Layer: 0
   m_Name: Enviro Collider (6)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61494,6 +61598,10 @@ Prefab:
     - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
       propertyPath: m_Name
       value: FireBowl (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099299496585796, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7da3ff9ebaee1647b9c419828f17d6b, type: 2}
@@ -62597,7 +62705,7 @@ GameObject:
   - component: {fileID: 1730290666}
   m_Layer: 0
   m_Name: Enviro Collider (34)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64138,7 +64246,7 @@ GameObject:
   - component: {fileID: 1788128014}
   m_Layer: 0
   m_Name: Enviro Collider (19)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65061,7 +65169,7 @@ GameObject:
   - component: {fileID: 1809322390}
   m_Layer: 0
   m_Name: Enviro Collider (28)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65294,7 +65402,7 @@ GameObject:
   - component: {fileID: 1816126258}
   m_Layer: 0
   m_Name: Enviro Collider (18)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66186,7 +66294,7 @@ GameObject:
   - component: {fileID: 1827493896}
   m_Layer: 0
   m_Name: Enviro Collider (22)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68590,7 +68698,7 @@ GameObject:
   - component: {fileID: 1894534680}
   m_Layer: 0
   m_Name: Enviro Collider (30)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72292,7 +72400,7 @@ GameObject:
   - component: {fileID: 2007829495}
   m_Layer: 0
   m_Name: Enviro Collider
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72387,7 +72495,7 @@ GameObject:
   - component: {fileID: 2009764901}
   m_Layer: 0
   m_Name: Enviro Collider (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75241,7 +75349,7 @@ GameObject:
   - component: {fileID: 2091595389}
   m_Layer: 0
   m_Name: Enviro Collider (32)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75819,7 +75927,7 @@ GameObject:
   - component: {fileID: 2105558129}
   m_Layer: 0
   m_Name: Enviro Collider (40)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

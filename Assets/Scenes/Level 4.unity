@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 5235368}
   m_Layer: 0
   m_Name: Enviro Collider (5)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 66764431}
   m_Layer: 0
   m_Name: Enviro Collider (10)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 110762249}
   m_Layer: 0
   m_Name: Enviro Collider (8)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3474,7 +3474,7 @@ GameObject:
   - component: {fileID: 373881475}
   m_Layer: 0
   m_Name: Enviro Collider (17)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4104,7 +4104,7 @@ GameObject:
   - component: {fileID: 426981162}
   m_Layer: 0
   m_Name: Enviro Collider (15)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6619,7 +6619,7 @@ GameObject:
   - component: {fileID: 674760540}
   m_Layer: 0
   m_Name: Enviro Collider (13)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8196,7 +8196,7 @@ GameObject:
   - component: {fileID: 857147600}
   m_Layer: 0
   m_Name: Enviro Collider
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9446,7 +9446,7 @@ GameObject:
   - component: {fileID: 970621351}
   m_Layer: 0
   m_Name: Enviro Collider (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10441,7 +10441,7 @@ GameObject:
   - component: {fileID: 1043085541}
   m_Layer: 0
   m_Name: Enviro Collider (19)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10605,7 +10605,7 @@ GameObject:
   - component: {fileID: 1052014796}
   m_Layer: 0
   m_Name: Enviro Collider (7)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10769,7 +10769,7 @@ GameObject:
   - component: {fileID: 1063233103}
   m_Layer: 0
   m_Name: Enviro Collider (22)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11972,7 +11972,7 @@ GameObject:
   - component: {fileID: 1187505205}
   m_Layer: 0
   m_Name: Enviro Collider (16)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12067,7 +12067,7 @@ GameObject:
   - component: {fileID: 1191121168}
   m_Layer: 0
   m_Name: Enviro Collider (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12554,7 +12554,7 @@ GameObject:
   - component: {fileID: 1260704180}
   m_Layer: 0
   m_Name: Enviro Collider (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13644,7 +13644,7 @@ GameObject:
   - component: {fileID: 1361545236}
   m_Layer: 0
   m_Name: Enviro Collider (12)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13739,7 +13739,7 @@ GameObject:
   - component: {fileID: 1374502763}
   m_Layer: 0
   m_Name: Enviro Collider (11)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14563,7 +14563,7 @@ GameObject:
   - component: {fileID: 1456181643}
   m_Layer: 0
   m_Name: Enviro Collider (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14985,7 +14985,7 @@ GameObject:
   - component: {fileID: 1533421806}
   m_Layer: 0
   m_Name: Enviro Collider (21)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16605,7 +16605,7 @@ GameObject:
   - component: {fileID: 1682342714}
   m_Layer: 0
   m_Name: Enviro Collider (20)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17321,7 +17321,7 @@ GameObject:
   - component: {fileID: 1751951177}
   m_Layer: 0
   m_Name: Enviro Collider (6)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17552,7 +17552,7 @@ GameObject:
   - component: {fileID: 1804626817}
   m_Layer: 0
   m_Name: Enviro Collider (9)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19374,7 +19374,7 @@ GameObject:
   - component: {fileID: 2046129689}
   m_Layer: 0
   m_Name: Enviro Collider (14)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19676,7 +19676,7 @@ GameObject:
   - component: {fileID: 2080611495}
   m_Layer: 0
   m_Name: Enviro Collider (18)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
