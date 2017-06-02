@@ -36,14 +36,18 @@ public class Health : MonoBehaviour
     {
         if (!isEnemy)
         {
-            if (damageDelaying == true && damageCooldownCount > 0)
+            if (damageCooldownCount < damageCooldown)
             {
-                damageCooldownCount -= Time.deltaTime;
+                damageCooldownCount += Time.deltaTime;
             }
-            else
-            {
-                //damageDelaying = false;
-            }
+            //if (damageDelaying == true && damageCooldownCount > 0)
+            //{
+            //    damageCooldownCount -= Time.deltaTime;
+            //}
+            //else
+            //{
+            //    //damageDelaying = false;
+            //}
         }
         if (dead) 
 		{
@@ -164,6 +168,10 @@ public class Health : MonoBehaviour
         }
         if (!isEnemy)
         {
+            if (damageDelaying == true && damageCooldownCount > 0)
+            {
+                damageCooldownCount -= Time.deltaTime * 2;
+            }
             if (otherCollider.gameObject.tag == "Enemy")
             {
                 damageDelaying = true;
@@ -183,7 +191,7 @@ public class Health : MonoBehaviour
             if (otherCollider.gameObject.tag == "Enemy")
             {
                 damageDelaying = false;
-                damageCooldownCount = damageCooldown;
+                //damageCooldownCount = damageCooldown;
             }
         }
     }
@@ -195,6 +203,7 @@ public class Health : MonoBehaviour
             if (otherCollider.gameObject.tag == "Enemy")
             {
                 damageDelaying = true;
+                //damageCooldownCount = damageCooldown;
             }
         }
         if (isEnemy) 
