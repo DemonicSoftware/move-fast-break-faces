@@ -485,7 +485,7 @@ MonoBehaviour:
   CanAttack: 1
   direction: {x: 1, y: 0}
   gun: 1
-  gunAmmo: 5
+  gunAmmo: 0
   hand: 1
   sword: 0
   currentWeapon: hand
