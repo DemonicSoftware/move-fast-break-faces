@@ -34,8 +34,8 @@ public class Combat : MonoBehaviour {
             if (shootCooldown <= 0f)
             {
                 CanAttack = true;
-                meleeAttackTrigger.GetComponent<Collider2D>().enabled = false;
-                meleeAttackTrigger.GetComponent<SpriteRenderer>().enabled = false;
+               //meleeAttackTrigger.GetComponent<Collider2D>().enabled = false;
+                //meleeAttackTrigger.GetComponent<SpriteRenderer>().enabled = false;
             }
             else
             {
@@ -77,10 +77,12 @@ public class Combat : MonoBehaviour {
 				}
 
             }
-            else if (currentWeapon == "hand") {
+            else if (currentWeapon == "hand")
+            {
                 shootCooldown = shootingRate;
                 CanAttack = false;
-                meleeAttackTrigger.GetComponent<Collider2D>().enabled = true;
+                //meleeAttackTrigger.GetComponent<Collider2D>().enabled = true;
+
                 //meleeAttackTrigger.GetComponent<SpriteRenderer>().enabled = true;
 
                 // The is enemy property

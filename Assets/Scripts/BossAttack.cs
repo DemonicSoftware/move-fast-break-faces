@@ -16,6 +16,8 @@ public class BossAttack : MonoBehaviour
     private bool dead = false;
     private bool isEnemy = true;
     private Animator anim;
+    private float damageCoolDown = 0.5f;
+    private float damageCoolDownCount;
     // Use this for initialization
     void Start ()
     {
@@ -26,36 +28,15 @@ public class BossAttack : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        damageCoolDownCount += Time.deltaTime;
         if (dead)
         {
             transform.rotation = Quaternion.identity;
         }
-
-        if (CanAttack == false)
-        {
-            if (shootCooldown > 0)
-            {
-                shootCooldown -= Time.deltaTime;
-            }
-            if (shootCooldown <= 0f)
-            {
-                CanAttack = true;
-                //lance.GetComponent<Collider2D>().enabled = false;
-            }
-            else
-            {
-                CanAttack = false;
-            }
-        }
+        
     }
 
-    void Attack()
-    {
-        if (CanAttack)
-        {
-            shootCooldown = shootingRate;
-        }
-    }
+    
 
     void Damage(int damageCount)
     {
@@ -99,13 +80,18 @@ public class BossAttack : MonoBehaviour
 
         if (melee != null)
         {
-            // Avoid friendly fire
-            if (melee.isEnemy != isEnemy)
+            if(damageCoolDownCount > damageCoolDown)
             {
-                Damage(melee.damage);
+                damageCoolDownCount = 0;
+                // Avoid friendly fire
+                if (melee.isEnemy != isEnemy)
+                {
+                    Damage(melee.damage);
 
-                //Destroy(melee.gameObject); 
+                    //Destroy(melee.gameObject); 
+                }
             }
+           
         }
     }
 }
