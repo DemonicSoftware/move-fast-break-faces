@@ -179,7 +179,7 @@ public class Health : MonoBehaviour
             if (otherCollider.gameObject.tag == "Enemy" && damageCooldownCount <= 0)
             {
                 gameObject.GetComponent<Health>().Damage(1);
-                gameObject.GetComponent<Health>().StartCoroutine(knockback(0.05f, 2000, (transform.position - otherCollider.transform.position).normalized));
+                gameObject.GetComponent<Health>().StartCoroutine(knockback(0.05f, 500, (transform.position - otherCollider.transform.position).normalized));
                 damageCooldownCount = damageCooldown;
             }
         }
