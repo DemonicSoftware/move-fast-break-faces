@@ -17736,6 +17736,91 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 718b4d23ecb6f11489ddc0c0779ee6f2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &447912946 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1868252135466196, guid: 718b4d23ecb6f11489ddc0c0779ee6f2,
+    type: 2}
+  m_PrefabInternal: {fileID: 447912945}
+--- !u!82 &447912947
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 447912946}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4eca079dda48abd4a92bdde688befa25, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 0
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &453152083
 GameObject:
   m_ObjectHideFlags: 0
@@ -34733,8 +34818,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 914989048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 185.8, y: -52.6, z: -0.69}
-  m_LocalScale: {x: 1.2899941, y: 6.2871614, z: 1}
+  m_LocalPosition: {x: 185.67, y: -52.73, z: -0.69}
+  m_LocalScale: {x: 1.1720268, y: 6.169194, z: 1}
   m_Children: []
   m_Father: {fileID: 1692889724}
   m_RootOrder: 35
@@ -47580,8 +47665,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1271717605}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 173.29, y: -47.35, z: -0.69}
-  m_LocalScale: {x: 13.014927, y: 1.2378666, z: 1}
+  m_LocalPosition: {x: 173.16, y: -47.35, z: -0.69}
+  m_LocalScale: {x: 12.896959, y: 1.2378666, z: 1}
   m_Children: []
   m_Father: {fileID: 1692889724}
   m_RootOrder: 36
@@ -68710,8 +68795,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1894534678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 212.2, y: -90.52, z: -0.69}
-  m_LocalScale: {x: 15.952909, y: 16.19637, z: 1}
+  m_LocalPosition: {x: 212.15, y: -90.52, z: -0.69}
+  m_LocalScale: {x: 15.909486, y: 16.19637, z: 1}
   m_Children: []
   m_Father: {fileID: 1692889724}
   m_RootOrder: 30
@@ -75361,8 +75446,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2091595387}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 212, y: -52.6, z: -0.69}
-  m_LocalScale: {x: 15.909625, y: 6.2871614, z: 1}
+  m_LocalPosition: {x: 212.06, y: -52.78, z: -0.69}
+  m_LocalScale: {x: 15.701643, y: 6.1216226, z: 1}
   m_Children: []
   m_Father: {fileID: 1692889724}
   m_RootOrder: 32
@@ -75939,8 +76024,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2105558127}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 245.54, y: -76.78, z: -0.69}
-  m_LocalScale: {x: 8.236933, y: 28.871174, z: 1}
+  m_LocalPosition: {x: 245.7, y: -76.78, z: -0.69}
+  m_LocalScale: {x: 8.08331, y: 28.871174, z: 1}
   m_Children: []
   m_Father: {fileID: 1692889724}
   m_RootOrder: 40
