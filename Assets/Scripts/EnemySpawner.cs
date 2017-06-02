@@ -16,11 +16,14 @@ public class EnemySpawner : MonoBehaviour {
 
     public float spawnInterval = 32;
     public int waitOffset = 8;
+	public int spawnAmount;
 
+	private int spawnCount = 0;
     private float initalWait;
     private bool waited = false;
 
 	private BoxCollider2D boxCollider2D;
+
 
 	void Start () 
 	{
@@ -52,7 +55,8 @@ public class EnemySpawner : MonoBehaviour {
             yield return new WaitForSeconds(initalWait);
         }
 
-		while(true) {
+		while(spawnCount <= spawnAmount) 
+		{
             if (spawnInterval > 2)
             {
                 spawnInterval -= 1f;
@@ -65,7 +69,7 @@ public class EnemySpawner : MonoBehaviour {
 			// Generate the new object
 			GameObject newObject = Instantiate<GameObject>(prefabToSpawn);
 			newObject.transform.position = new Vector2(randomX + this.transform.position.x, randomY + this.transform.position.y);
-
+			spawnCount++;
 			// Wait for some time before spawning another object
 			yield return new WaitForSeconds(spawnInterval);
 		}
