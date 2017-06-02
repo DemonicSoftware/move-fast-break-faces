@@ -7,8 +7,9 @@ public class Health : MonoBehaviour
 {
     public int HP = 5;
     public bool isEnemy = true;
-    public float damageCooldown = 1;
-	private float damgeCooldownCount;
+    public float damageCooldown = 0.5f;
+    public float damageCooldownCount;
+    private bool damageDelaying = false;
     private Animator anim;
     public GameObject damagePanel;
 	private AudioSource[] enemyAudio;
@@ -21,6 +22,8 @@ public class Health : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        damageCooldownCount = damageCooldown;
+        damageDelaying = false;
         anim = GetComponent<Animator>();
         healthBar = GameObject.Find("HealthBar").GetComponent<SpriteRenderer>();
 
@@ -31,11 +34,18 @@ public class Health : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		if (damgeCooldownCount > 0)
+        if (!isEnemy)
         {
-			damgeCooldownCount -= Time.deltaTime;
+            if (damageDelaying == true && damageCooldownCount > 0)
+            {
+                damageCooldownCount -= Time.deltaTime;
+            }
+            else
+            {
+                //damageDelaying = false;
+            }
         }
-		if (dead) 
+        if (dead) 
 		{
 			transform.rotation = Quaternion.identity;
 		}
@@ -146,21 +156,49 @@ public class Health : MonoBehaviour
            }
         }
     }
+    private void OnCollisionStay2D(Collision2D otherCollider)
+    {
+        if(isEnemy)
+        {
+            anim.SetBool("attacking", true);
+        }
+        if (!isEnemy)
+        {
+            if (otherCollider.gameObject.tag == "Enemy")
+            {
+                damageDelaying = true;
+            }
+            if (otherCollider.gameObject.tag == "Enemy" && damageCooldownCount <= 0)
+            {
+                gameObject.GetComponent<Health>().Damage(1);
+                gameObject.GetComponent<Health>().StartCoroutine(knockback(0.05f, 1000, transform.position - otherCollider.transform.position));
+                damageCooldownCount = damageCooldown;
+            }
+        }
+    }
+    private void OnCollisionExit2D(Collision2D otherCollider)
+    {
+        if (!isEnemy)
+        {
+            if (otherCollider.gameObject.tag == "Enemy")
+            {
+                damageDelaying = false;
+                damageCooldownCount = damageCooldown;
+            }
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D otherCollider)
     {
-		if (isEnemy) 
-		{			
-				anim.SetBool ("attacking", true);
-		}
-        if (!isEnemy) 
+		if (!isEnemy) 
 		{
-			if (otherCollider.gameObject.tag == "Enemy" && damgeCooldownCount <= 0)
+            if (otherCollider.gameObject.tag == "Enemy")
             {
-				damgeCooldownCount = damageCooldown;
-                Damage(1);
-                StartCoroutine(knockback(0.05f , 500,transform.position - otherCollider.transform.position));
+                damageDelaying = true;
             }
+        }
+        if (isEnemy) 
+		{
         }
 
     }

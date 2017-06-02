@@ -72,11 +72,11 @@ GameObject:
   - component: {fileID: 95926182410137616}
   - component: {fileID: 114208877581898062}
   - component: {fileID: 114453386010362054}
-  - component: {fileID: 114683400768322222}
   - component: {fileID: 114470275591850170}
   - component: {fileID: 114978326864706968}
   - component: {fileID: 212942585314970578}
   - component: {fileID: 82298908836779088}
+  - component: {fileID: 114237429511451344}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -167,7 +167,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1614454989968284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.9, y: -10.9, z: 0}
+  m_LocalPosition: {x: 42.93, y: -11.68, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 4625694155367598}
@@ -424,6 +424,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useSide: 0
+--- !u!114 &114237429511451344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614454989968284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7b170ed5aa6490983d594f2c61867b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114453386010362054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -454,19 +465,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 5
   isEnemy: 0
-  damageCooldown: 1
+  damageCooldown: 0.5
+  damageCooldownCount: 0
+  damageDelaying: 0
   damagePanel: {fileID: 0}
---- !u!114 &114683400768322222
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1614454989968284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7b170ed5aa6490983d594f2c61867b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114978326864706968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -480,11 +482,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shots: {fileID: 4258954285876444, guid: 639b4e68d7ea858419dba7b913eabda7, type: 2}
   meleeAttackTrigger: {fileID: 1633556801118732}
-  shootingRate: 0.25
+  shootingRate: 0
   CanAttack: 1
   direction: {x: 1, y: 0}
   gun: 1
-  gunAmmo: 0
+  gunAmmo: 100
   hand: 1
   sword: 0
   currentWeapon: hand

@@ -7,7 +7,7 @@ public class Combat : MonoBehaviour {
 	public Transform Shots;
     //public Transform melee;
     public GameObject meleeAttackTrigger;
-    public float shootingRate = 0.25f;
+    public float shootingRate = 0.0f;
     private float shootCooldown = 0;
     public bool CanAttack =true;
     public Vector2 direction = new Vector2(1, 0);
