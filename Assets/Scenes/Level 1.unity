@@ -10608,7 +10608,7 @@ Prefab:
     - target: {fileID: 114470275591850170, guid: b9f81fe5e01a5dd4cad0db35569bea34,
         type: 2}
       propertyPath: damageCooldown
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114683400768322222, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}

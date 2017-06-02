@@ -122,7 +122,7 @@ public class RangedEnemyMovement : Physics2DObject
         //shotTransform.position += positionAdjustment;
 
         RangeAttack shot = shotTransform.gameObject.GetComponent<RangeAttack>();
-        shot.speed = 1;
+        //shot.speed = 1;
         shot.direction = playerTransform.position - transform.position;//this.direction;
 
         // The is enemy property

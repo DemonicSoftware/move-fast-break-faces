@@ -189,10 +189,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 100
+  speed: 10
   direction: {x: 1, y: 0}
   isEnemy: 0
-  time: 20
+  time: 5
   useSide: 0
 --- !u!212 &212970154685381404
 SpriteRenderer:

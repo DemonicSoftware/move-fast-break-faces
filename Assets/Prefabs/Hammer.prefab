@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 100
+  speed: 50
   direction: {x: 1, y: 0}
   isEnemy: 0
   time: 20

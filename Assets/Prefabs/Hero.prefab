@@ -467,7 +467,6 @@ MonoBehaviour:
   isEnemy: 0
   damageCooldown: 0.5
   damageCooldownCount: 0
-  damageDelaying: 0
   damagePanel: {fileID: 0}
 --- !u!114 &114978326864706968
 MonoBehaviour:
@@ -486,7 +485,7 @@ MonoBehaviour:
   CanAttack: 1
   direction: {x: 1, y: 0}
   gun: 1
-  gunAmmo: 100
+  gunAmmo: 5
   hand: 1
   sword: 0
   currentWeapon: hand

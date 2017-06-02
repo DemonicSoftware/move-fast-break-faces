@@ -33,7 +33,7 @@ public class RangeAttack : MonoBehaviour {
 	}
 		
 	void FixedUpdate() {
-		rb2d.AddForce(movement * speed);
+		rb2d.AddForce(movement.normalized * speed);
 	}
 
     void OnTriggerEnter2D(Collider2D otherCollider)
