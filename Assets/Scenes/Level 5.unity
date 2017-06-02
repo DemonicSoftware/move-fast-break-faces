@@ -15172,7 +15172,7 @@ Prefab:
     - target: {fileID: 114424309461429148, guid: bd00a3f739f1ea04fa3b2b5fc3c1d3c0,
         type: 2}
       propertyPath: m_Text
-      value: 'Congratulation! You have completed: Move Fast, Brake Faces.
+      value: 'Congratulations! You have completed Move Fast, Break Faces.
 
         Press "Esc" to move to the Main Menu.
 

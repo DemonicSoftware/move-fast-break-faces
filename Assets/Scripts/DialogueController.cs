@@ -72,22 +72,22 @@ public class DialogueController : MonoBehaviour {
 		switch(scene) {
 			case "Level 1":
 				sceneSpeaker = new string[] { v, l, v, l, v, v, l, v, v, l, v, v };
-				sceneDialogue = new string[] { "Wake up Larry... and welcome... TO YOUR DOOOOOOOOOOOM (use the 'f' key to progress through dialogue)", "Who are... what is this?", "Who I am doesn't matter and you're here because I decided to put you through an arbitrary series of life or death trials for my own entertainment.", "...", "Anyway! Take a look arround the room using your cursor.", "Once I unpause time you'll be able to move arround with WASD.", "Is this just an elaborate prank?", "You can swing that baseball bat there with your left mouse button 'LMB' to break the faces of your enemies!", "Your health is displayed behind you in a bar and you will die if it reaches 0.", "WHAT ARE YOU ON ABOUT, YOU LUNATIC?", "This... Larry...", "... is only the tutorial! HAHAHHAHHAHHAHHAHA!" };
+			sceneDialogue = new string[] { "Wake up Larry... and welcome... TO YOUR DOOOOOOOOOOOM (use the 'F' key to progress through dialogue)", "Who are... what is this?", "Who I am doesn't matter and you're here because I decided to put you through an arbitrary series of life or death trials for my own entertainment.", "...", "Anyway! Take a look arround the room using your cursor.", "Once I unpause time you'll be able to move arround with WASD.", "Is this just an elaborate prank?", "You can swing that baseball bat there with your left mouse button (LMB) to break the faces of your enemies!", "Your health is displayed behind you in a bar and you will die if it reaches 0.", "WHAT ARE YOU ON ABOUT, YOU LUNATIC?", "This... Larry...", "... is only the tutorial! HAHAHHAHHAHHAHHAHA!" };
 				break;
 
 			case "Level 2":
 				sceneSpeaker = new string[] { l, v, v, v, v, v, v, v };
-				sceneDialogue = new string[] { "What the hell were those things?", "Well done, Larry.", "But I like it rare and you... are nothing special.", "I am now introducing a new mechanic - HAMMERS!", "You can pick them up and throw them at enemies...", "... using your your right mouse button 'RMB'! HAHAHHAHHHAHHAHAHAH!", "Go pick that one up and throw it at those enemies over there!", "I'm so EXCITED I can barely contain myself!" };
+			sceneDialogue = new string[] { "What the hell were those things?", "Well done, Larry.", "But I like it rare and you... are nothing special.", "I am now introducing a new mechanic - HAMMERS!", "You can pick them up and throw them at enemies...", "... using your your right mouse button (RMB)! HAHAHHAHHHAHHAHAHAH!", "Go pick that one up and throw it at those enemies over there!", "I'm so EXCITED I can barely contain myself!" };
 				break;
 
 			case "Level 3":
 				sceneSpeaker = new string[] { v, v, l, v };
-				sceneDialogue = new string[] { "Oh how fun that was!", "Time for a NEW MECHANIC, Larry!", "Please! No more objects, rules or mechanic! There's only so much my heart can take!", "There are now RANGED enemies. They'll fire orbs of orb'iness at you so be careful HAHAHA!" };
+				sceneDialogue = new string[] { "Oh how fun that was!", "Time for a NEW MECHANIC, Larry!", "Please! No more objects, rules or mechanics! There's only so much my heart can take!", "There are now RANGED enemies. They'll fire orbs of orb-iness at you so be careful HAHAHA!" };
 				break;
 
 			case "Level 4":
 				sceneSpeaker = new string[] { v, l, v };
-				sceneDialogue = new string[] { "Guess what, Larry?", "... a... a new mechic?", "Time for the boss level! Have ALL OF MY MECHANICS AT THE SAME TIME!" };
+				sceneDialogue = new string[] { "Guess what, Larry?", "... a... a new mechanic?", "Time for the boss level! Have ALL OF MY MECHANICS AT THE SAME TIME!" };
 				break;
 
 			case "Level 5":
