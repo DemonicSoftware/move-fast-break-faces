@@ -3167,6 +3167,7 @@ MonoBehaviour:
   spawnNumberID: 2
   spawnInterval: 10
   waitOffset: 4
+  spawnAmount: 0
 --- !u!61 &484348595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5122,6 +5123,7 @@ MonoBehaviour:
   spawnNumberID: 1
   spawnInterval: 10
   waitOffset: 4
+  spawnAmount: 0
 --- !u!61 &879249477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10175,6 +10177,11 @@ Prefab:
       propertyPath: damagePanel
       value: 
       objectReference: {fileID: 731408818}
+    - target: {fileID: 114978326864706968, guid: b9f81fe5e01a5dd4cad0db35569bea34,
+        type: 2}
+      propertyPath: gunAmmo
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9f81fe5e01a5dd4cad0db35569bea34, type: 2}
   m_IsPrefabParent: 0

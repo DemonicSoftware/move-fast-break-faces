@@ -20,11 +20,6 @@ public class PlayerController : MonoBehaviour {
         Vector3 directionToLookAt = (pointInSpace - transform.position).normalized;
         combat.direction = directionToLookAt;
 
-    }
-
-    void FixedUpdate()
-    {
-
         if (IsDead())
         {
             if (GetComponent<SpriteRenderer>() != null)
@@ -63,6 +58,10 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
+    }
+
+    void FixedUpdate()
+    {
 
     }
 
