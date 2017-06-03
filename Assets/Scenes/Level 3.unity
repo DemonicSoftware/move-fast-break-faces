@@ -7375,6 +7375,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 29
       objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
   m_IsPrefabParent: 0
@@ -9467,6 +9472,11 @@ Prefab:
     - target: {fileID: 1099872386055550, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
       propertyPath: m_Name
       value: Ranged enemy (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
@@ -16473,6 +16483,11 @@ Prefab:
     - target: {fileID: 1099872386055550, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
       propertyPath: m_Name
       value: Ranged enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
@@ -31390,6 +31405,11 @@ Prefab:
       propertyPath: m_Name
       value: Ranged enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
   m_IsPrefabParent: 0
@@ -39523,6 +39543,11 @@ Prefab:
     - target: {fileID: 1099872386055550, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
       propertyPath: m_Name
       value: Ranged enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
@@ -58131,6 +58156,11 @@ Prefab:
       propertyPath: m_Name
       value: Ranged enemy (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
   m_IsPrefabParent: 0
@@ -59435,6 +59465,11 @@ Prefab:
     - target: {fileID: 1099872386055550, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
       propertyPath: m_Name
       value: Ranged enemy (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
@@ -63481,6 +63516,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
   m_IsPrefabParent: 0
@@ -63871,6 +63911,11 @@ Prefab:
     - target: {fileID: 1099872386055550, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
       propertyPath: m_Name
       value: Ranged enemy (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
@@ -67212,6 +67257,11 @@ Prefab:
       propertyPath: m_Name
       value: Ranged enemy (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
   m_IsPrefabParent: 0
@@ -68147,6 +68197,11 @@ Prefab:
     - target: {fileID: 4686348025298820, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
@@ -73048,6 +73103,11 @@ Prefab:
       propertyPath: m_Name
       value: Ranged enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
   m_IsPrefabParent: 0
@@ -76550,6 +76610,11 @@ Prefab:
     - target: {fileID: 1099872386055550, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}
       propertyPath: m_Name
       value: Ranged enemy (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114988504171477866, guid: 72f28b6ad78e6c24281f3712fc94ee17,
+        type: 2}
+      propertyPath: followFromAnyDistance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72f28b6ad78e6c24281f3712fc94ee17, type: 2}

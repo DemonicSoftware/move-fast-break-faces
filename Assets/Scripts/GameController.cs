@@ -51,10 +51,23 @@ public class GameController : MonoBehaviour {
         
 	}
 
-	void UpdateEnemyCount() {
-		string t = "Enemies Left:";		
-        if(enemyCountText != null)
-		    enemyCountText.text = t + enemyCount.ToString();
+	void UpdateEnemyCount() 
+	{
+		string t;
+		if (SceneManager.GetActiveScene ().name == "Endless") 
+		{
+			t = "Enemies Smashed:";	
+			if(enemyCountText != null)
+				enemyCountText.text = t + (enemyCount - 1).ToString();
+		}
+		else 
+		{
+			t = "Enemies Left:";
+			if(enemyCountText != null)
+				enemyCountText.text = t + enemyCount.ToString();
+		}
+			
+        
 	}
 
 	void UpdateAmmoCount()
@@ -73,13 +86,31 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	public void EnemyKilled() {
-		enemyCount--;
+	public void EnemyKilled() 
+	{
+		if (SceneManager.GetActiveScene ().name == "Endless") 
+		{
+			enemyCount++;
+		} 
+		else 
+		{
+			enemyCount--;
+		}
 	}
 
-	public void PlayerDied() {
-		gameOverText.SetActive(true);
-		gameLost = true;
+	public void PlayerDied() 
+	{
+		if (SceneManager.GetActiveScene ().name == "Endless") 
+		{
+			gameOverText.SetActive(true);
+			gameLost = true;
+		} 
+		else 
+		{
+			gameOverText.SetActive(true);
+			gameLost = true;
+		}
+
 	}
 
 	public void PlayerWon()

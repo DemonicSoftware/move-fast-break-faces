@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Combat.cs" />
      <Compile Include="Assets\Scripts\DialogueController.cs" />
+     <Compile Include="Assets\Scripts\EndlessSpawner.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\ExplotionController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
