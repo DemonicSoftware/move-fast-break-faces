@@ -5,17 +5,11 @@ using UnityEngine;
 public class Combat : MonoBehaviour {
 
 	public Transform Shots;
-    //public Transform melee;
-    public GameObject meleeAttackTrigger;
-    public float shootingRate = 0.0f;
-    private float shootCooldown = 0;
-    public bool CanAttack = true;
     public Vector2 direction = new Vector2(1, 0);
-    public bool gun = false;
+    public bool gun;
     public double gunAmmo = 0;
-    public bool hand = true;
-    public bool sword = false;
-    public string currentWeapon = "hand";
+    public bool hand;
+    public string currentWeapon;
     
 	void Start () {
 
@@ -34,7 +28,6 @@ public class Combat : MonoBehaviour {
 			}
 
 			if (gun == true) {
-				shootCooldown = shootingRate;
 				// Create a new shot
 				var shotTransform = Instantiate (Shots) as Transform;
 			
@@ -54,7 +47,7 @@ public class Combat : MonoBehaviour {
 				
 		}
 		else if (currentWeapon == "hand") {
-			shootCooldown = shootingRate;
+			
 		}
 			
 	}

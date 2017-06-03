@@ -19,10 +19,6 @@ public class PlayerController : MonoBehaviour {
         Vector3 pointInSpace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 directionToLookAt = (pointInSpace - transform.position).normalized;
         combat.direction = directionToLookAt;
-        if (Input.GetButtonDown("changeWeapon"))
-        {
-            combat.changeWeapon();
-        }
 
     }
 
