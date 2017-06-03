@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour {
 	}
 	
 	void Update () {
-		levelSwitcher = new LevelSwitcher();
+        levelSwitcher = (LevelSwitcher) ScriptableObject.CreateInstance("LevelSwitcher"); 
 
 		if (Input.GetKey(KeyCode.Escape))
         {
@@ -65,8 +65,10 @@ public class GameController : MonoBehaviour {
 	}
 
 	void CheckWin() {
-		if (enemyCount <= 0) {
-			gameWonText.SetActive(true);
+		if (enemyCount <= 0)
+        {
+            Time.timeScale = 0;
+            gameWonText.SetActive(true);
 			gameWon = true;
 		}
 	}
@@ -82,10 +84,10 @@ public class GameController : MonoBehaviour {
 
 	public void PlayerWon()
     {
+        Time.timeScale = 0;
         gameWonText.SetActive(true);
 		gameWon = true;
-        GameObject.Find("HealthBar").GetComponent<SpriteRenderer>().enabled = false;
-        Time.timeScale = 0;
+        GameObject.Find("HealthBar").GetComponent<SpriteRenderer>().enabled = false;   
 	}
 
 	public int GetEnemyCount()

@@ -181,6 +181,7 @@ public class Health : MonoBehaviour
                 gameObject.GetComponent<Health>().Damage(1);
                 gameObject.GetComponent<Health>().StartCoroutine(knockback(0.05f, 500, (transform.position - otherCollider.transform.position).normalized));
                 damageCooldownCount = damageCooldown;
+             
             }
         }
     }
