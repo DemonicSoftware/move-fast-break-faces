@@ -32,7 +32,12 @@ public class LevelSwitcher : ScriptableObject
         SceneManager.LoadScene("Main Menu");
 	}
 
-	public void LoadNextLevel() {
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    public void LoadNextLevel() {
         string scene = SceneManager.GetActiveScene().name;
 
 		switch(scene) {

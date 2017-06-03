@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour {
 
         if (IsDead())
         {
-            if (GetComponent<SpriteRenderer>() != null)
-                GetComponent<SpriteRenderer>().enabled = false;
+            //if (GetComponent<SpriteRenderer>() != null)
+            //    GetComponent<SpriteRenderer>().enabled = false;
             GameController.gameControllerInstance.PlayerDied();
         }
 
