@@ -65,7 +65,7 @@ public class Health : MonoBehaviour
             // Update what the health bar looks like.
             UpdateHealthBar();
 			playerAudio = GetComponents<AudioSource>();
-			playerAudio [0].Play ();
+			playerAudio [Random.Range(0, playerAudio.Length)].Play ();
 
 
         }
