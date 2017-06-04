@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BossLance : MonoBehaviour {
     public int damage = 1;
-    private bool isEnemy = true;
     // Use this for initialization
     void Start () {
         //GetComponent<Collider2D>().enabled = false;

@@ -28,7 +28,13 @@ public class LevelSwitcher : ScriptableObject
         SceneManager.LoadScene("Level 5");
 	}
 
-	public void LoadMainMenu() {
+    public void LoadEndless()
+    {
+        SceneManager.LoadScene("Endless");
+        Time.timeScale = 1;
+    }
+
+    public void LoadMainMenu() {
         SceneManager.LoadScene("Main Menu");
 	}
 

@@ -7,7 +7,6 @@ public class BossAttack : MonoBehaviour
 {
     public bool CanAttack = true;
     public float shootingRate = 0.25f;
-    private float shootCooldown = 0;
     public int damage = 1;
     public int HP = 20;
     public Slider healthSlider;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour {
@@ -64,9 +65,9 @@ public class DialogueController : MonoBehaviour {
 	}
 
 	private void GetSceneDialogue() {
-		string scene = Application.loadedLevelName;
+        string scene = SceneManager.GetActiveScene().name;
 
-		string l = "Larry";
+        string l = "Larry";
 		string v = "Voice";
 
 		switch(scene) {

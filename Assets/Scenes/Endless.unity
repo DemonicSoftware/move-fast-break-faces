@@ -7053,7 +7053,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 95e06bb5cdf0a474190a9eabd2a8c8a2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 31d5435120d66c24cb1fa592280c3e24, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7111,7 +7111,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -9824,8 +9824,8 @@ MonoBehaviour:
   prefabToSpawn2: {fileID: 1099872386055550, guid: 72f28b6ad78e6c24281f3712fc94ee17,
     type: 2}
   spawnNumberID: 4
-  spawnInterval: 4
-  waitOffset: 8
+  spawnInterval: 10
+  waitOffset: 4
 --- !u!61 &979295214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11742,8 +11742,8 @@ MonoBehaviour:
   prefabToSpawn2: {fileID: 1099872386055550, guid: 72f28b6ad78e6c24281f3712fc94ee17,
     type: 2}
   spawnNumberID: 2
-  spawnInterval: 4
-  waitOffset: 8
+  spawnInterval: 10
+  waitOffset: 4
 --- !u!61 &1181305273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12769,8 +12769,8 @@ MonoBehaviour:
   prefabToSpawn2: {fileID: 1099872386055550, guid: 72f28b6ad78e6c24281f3712fc94ee17,
     type: 2}
   spawnNumberID: 1
-  spawnInterval: 4
-  waitOffset: 8
+  spawnInterval: 10
+  waitOffset: 4
 --- !u!1 &1332732064
 GameObject:
   m_ObjectHideFlags: 0
@@ -17648,8 +17648,8 @@ MonoBehaviour:
   prefabToSpawn2: {fileID: 1099872386055550, guid: 72f28b6ad78e6c24281f3712fc94ee17,
     type: 2}
   spawnNumberID: 3
-  spawnInterval: 4
-  waitOffset: 8
+  spawnInterval: 10
+  waitOffset: 4
 --- !u!61 &1863755016
 BoxCollider2D:
   m_ObjectHideFlags: 0
